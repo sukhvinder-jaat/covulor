@@ -62,16 +62,17 @@ module.exports = {
         darkBlack: "#1E1E1E",
         mediumlightgray: "#C5C5C5",
         purpleBlue: "#6259CE",
+        mediumPurple: "#C08FFF",
+        thistle: "#C6C2DE",
+        ghostWhiteLight: "#F2F0F9",
+        lightToBlack:"#25213B",
       },
       backgroundImage: {
         "login-bg": "url('/public/assets/images/login-bg.webp')",
       },
       boxShadow: {
         "login-form": "0px 20px 24px 0px #8D8D8D29",
-        mediumPurple: "#C08FFF",
-        thistle: "#C6C2DE",
-        ghostWhiteLight: "#F2F0F9",
-        lightToBlack:"#25213B",
+        
       },
     },
   },

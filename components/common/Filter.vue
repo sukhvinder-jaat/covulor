@@ -18,38 +18,49 @@
                                 class=" font-roboto font-medium text-sm leading-4 tracking-[5%] ps-[5px] text-lightToBlack">Default</label>
                         </div>
                         <div class=" mt-4 flex gap-6 items-center justify-between">
-                            <div>
+                            <div class=" w-6/12">
                                 <input type="radio" id="age1" name="age" value="30">
                                 <label for="age1"
                                     class="text-lightToBlack font-roboto font-medium text-sm leading-4 tracking-[5%] ps-[5px]">Repository
                                     ID</label>
                             </div>
-                            <div class=" flex items-center gap-[21px]">
-                                <CommonSelect :options="countries" />
-                                <CommonSelect :options="countries" />
+                            <div class="flex gap-5 items-center w-full">
+                                <div class=" flex items-center gap-[21px]">
+                                    <CommonSelect :options="countries" />
+                                    <CommonSelect :options="countries" />
+                                </div>
+                                <Icon name="i-heroicons-x-mark-16-solid"
+                                    class=" text-black opacity-50 w-[15px] h-[14px]" />
                             </div>
                         </div>
                         <div class=" mt-4 flex gap-6 items-center justify-between">
-                            <div>
+                            <div class=" w-6/12">
                                 <input type="radio" id="age1" name="age" value="30">
                                 <label for="age1"
                                     class=" font-roboto font-medium text-lightToBlack text-sm leading-4 tracking-[5%] ps-[5px]">Source
                                     Control</label>
                             </div>
-                            <div class="max-w-[279px] w-full">
-                                <CommonSelect :options="countries" />
+                            <div class="flex gap-5 items-center w-full">
+                                <div class="max-w-[279px] w-full">
+                                    <CommonSelect :options="countries" />
+                                </div>
+                                <Icon name="i-heroicons-x-mark-16-solid"
+                                    class=" text-black opacity-50 w-[15px] h-[14px]" />
                             </div>
                         </div>
                         <div class=" mt-4 flex gap-6 items-center justify-between">
-                            <div>
+                            <div class=" w-6/12">
                                 <input type="radio" id="age1" name="age" value="30">
                                 <label for="age1"
                                     class=" font-roboto font-medium text-lightToBlack text-sm leading-4 tracking-[5%] ps-[5px]">Tags</label>
                             </div>
-                            <div class="max-w-[279px] w-full">
-                                <CommonSelect :options="countries" />
+                            <div class="flex gap-5 items-center w-full">
+                                <div class="max-w-[279px] w-full">
+                                    <CommonSelect :options="countries" />
+                                </div>
+                                <Icon name="i-heroicons-x-mark-16-solid"
+                                    class=" text-black opacity-50 w-[15px] h-[14px]" />
                             </div>
-                            <i-heroicons-x-mark-16-solid class=" text-black opacity-50 w-[15px] h-[14px]"/>
                         </div>
                     </form>
                 </div>
