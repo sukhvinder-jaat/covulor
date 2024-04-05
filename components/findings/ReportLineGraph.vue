@@ -11,9 +11,9 @@
 </template>
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts';
-import { dashboardLineChartList } from "../../utils/helper";
+import { findingsLineChartList } from "../../utils/helper";
 
-const chartData = dashboardLineChartList[0] || {};
+const chartData = findingsLineChartList[0] || {};
 const chartOptions = {
   chart: {
     height: 350,
@@ -63,17 +63,7 @@ const chartOptions = {
     },
   },
   legend: {
-    markers: {
-      fillColors: ["#FF993A", "#8425FF"], // Colors for the legend markers for each series
-    },
-    tooltipHoverFormatter: function (val: Number, opts: any) {
-      return (
-        val +
-        " - <strong>" +
-        opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-        "</strong>"
-      );
-    },
+    show: false
   },
   tooltip: {
     marker: {
@@ -105,5 +95,3 @@ const chartOptions = {
 };
 const series: any[] = chartData.series || [];
 </script>
-
-  
