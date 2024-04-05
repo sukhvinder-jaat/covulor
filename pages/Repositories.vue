@@ -9,11 +9,14 @@
             </div>
         </div>
         <div class="mt-16">
-<CommonFilter/>
+            <CommonFilter />
         </div>
     </div>
 </template>
 <script setup lang="ts">
 const countries = ['United States', 'Canada', 'Mexico']
-
+// Page Meta
+definePageMeta({
+    layout: "home",
+});
 </script>
