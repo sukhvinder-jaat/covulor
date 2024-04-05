@@ -49,6 +49,7 @@
                             <div class="max-w-[279px] w-full">
                                 <CommonSelect :options="countries" />
                             </div>
+                            <i-heroicons-x-mark-16-solid class=" text-black opacity-50 w-[15px] h-[14px]"/>
                         </div>
                     </form>
                 </div>
