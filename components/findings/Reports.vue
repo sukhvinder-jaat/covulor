@@ -14,7 +14,7 @@
         <!-- Line graph -->
         <FindingsReportLineGraph />
         <!-- Progress bar -->
-        <CommonChartProgressBar />
+        <CommonChartProgressBar :chartProgressBar="dashboardChartProgressBar" />
     </div>
 </template>
 <script setup lang="ts">
