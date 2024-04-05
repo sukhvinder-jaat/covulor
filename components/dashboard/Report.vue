@@ -25,7 +25,7 @@ const selected = ref(title[0])
 </script>
 
 
- <style scoped>
+<style scoped>
 /* Custom styling */
 div.border_custom button {
     padding: 9px 8px 9px 8px !important;
