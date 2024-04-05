@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen w-full md:bg-center bg-left bg-login-bg bg-cover lg:px-[76px] px-8 lg:py-[116px] py-14 flex justify-between md:flex-row flex-col"
+    class="min-h-screen w-full md:bg-center bg-left bg-login-bg bg-cover lg:px-[76px] sm:px-8 px-4 lg:py-[116px] py-14 flex justify-between md:flex-row flex-col"
   >
     <div
       class="lg:max-w-[465px] max-w-[320px] flex flex-col items-center md:items-start mx-auto md:mx-0"
@@ -21,7 +21,7 @@
       </p>
     </div>
     <div
-      class="w-[460px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8"
+      class="sm:w-[460px] max-w-[460px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8"
     >
       <h2
         class="text-center font-roboto font-semibold text-2xl text-darkBlack pb-[38px]"
