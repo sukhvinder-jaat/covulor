@@ -59,6 +59,13 @@ module.exports = {
         lightGainsBor: "#E6E6E6",
         midnightBlue: "#0C063A",
         iron: "#D6D6D6",
+        darkBlack: "#1E1E1E",
+      },
+      backgroundImage: {
+        "login-bg": "url('/public/assets/images/login-bg.webp')",
+      },
+      dropShadow: {
+        "login-form": "0px 20px 24px 0px #8D8D8D29",
       },
     },
   },
