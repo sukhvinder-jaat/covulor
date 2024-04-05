@@ -221,7 +221,7 @@ export const chartProgressBar = [
 ];
 
 // FINDINGS REPORT LINE CHART  DATA
-export const findingsLineChartList = [
+export const dashboardLineChartList = [
   {
     series: [
       {
@@ -281,4 +281,37 @@ export const findingChartData = [{
 export const findingPieChartData = {
   labels: "Total",
   value: '6.4587',
- };
+};
+
+
+
+// FINDINGS REPORT LINE CHART  DATA
+export const findingsLineChartList = [
+  {
+    series: [
+      {
+        name: "Findings Without action plan",
+        data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
+      },
+      {
+        name: "Findings With acction plan",
+        data: [1500, 3900, 4800, 9000, 6000, 4000, 6000],
+      },
+    ],
+    categories: [
+      "Jun 4",
+      "Jun 5",
+      "Jun 6",
+      "Jun 7",
+      "Jun 8",
+      "Jun 9",
+      "Jun 10",
+      "Jun 11",
+      "Jun 12",
+    ],
+    optionsData: {
+      min: 0,
+      max: 10000,
+    },
+  },
+];
