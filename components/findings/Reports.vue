@@ -12,18 +12,16 @@
             </div>
         </div>
         <!-- Line graph -->
-        <DashboardReportLineGraph />
+        <FindingsReportLineGraph />
         <!-- Progress bar -->
-        <CommonChartProgressBar />
+        <CommonChartProgressBar :chartProgressBar="dashboardChartProgressBar" />
     </div>
 </template>
-
 <script setup lang="ts">
 // Data
 const title = ['Diary', 'Diary ', ' Diary']
 const selected = ref(title[0])
 </script>
-
 
 <style scoped>
 /* Custom styling */

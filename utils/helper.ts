@@ -9,14 +9,16 @@ import Conector from "../components/icons/Conector.vue";
 // SIDEBAR ICONS TYPES
 interface DropdownItem {
   title: string;
-  content: { subLink: string; link: string }[];
+  content?: { subLink: string; link: string }[];
   svg: any;
+  href: string;
 }
 
 // SideBar Dropdown Values
 export const dropdownSidebarList: DropdownItem[] = [
   {
     title: "Dashboards",
+    href: "/",
     content: [
       { subLink: "Reports", link: "#report" },
       { subLink: "SLSA", link: "#slsa" },
@@ -27,32 +29,17 @@ export const dropdownSidebarList: DropdownItem[] = [
   },
   {
     title: "Repositories",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "/repositories",
     svg: Repositories,
   },
   {
     title: "Findings",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "/findings",
     svg: Findings,
   },
   {
     title: "Conector Page",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "/",
     svg: Conector,
   },
 ];
@@ -220,8 +207,26 @@ export const chartProgressBar = [
   },
 ];
 
+// Chart progress bar data
+export const dashboardChartProgressBar = [
+  {
+    title: "Findings Without action plan",
+    rank: 26,
+    rankPercentage: (26 * 100) / 31,
+  },
+  {
+    title: "Findings With action plan",
+    rank: 5,
+    rankPercentage: 100 - 83.87,
+  },
+  {
+    title: "Total Findings",
+    rank: 31,
+    rankPercentage: 0,
+  },
+];
 // FINDINGS REPORT LINE CHART  DATA
-export const findingsLineChartList = [
+export const dashboardLineChartList = [
   {
     series: [
       {
@@ -263,22 +268,56 @@ export const findingCircularChartData = {
   colors: ["#8220FF", "#05CB0C", "#FD9B3D", "#E6D2FF"],
 };
 
-export const findingChartData = [{
-  labels: "Total Findings",
-  value: '17k',
-  percentage: '100%'
-},
-{
-  labels: "Vulnerabilities Aggregated",
-  value: '13k',
-  percentage: '35%'
-}, {
-  labels: "Vulnerabilities Priorizated",
-  value: '4.0k',
-  percentage: '14%'
-}
+export const findingChartData = [
+  {
+    labels: "Total Findings",
+    value: "17k",
+    percentage: "100%",
+  },
+  {
+    labels: "Vulnerabilities Aggregated",
+    value: "13k",
+    percentage: "35%",
+  },
+  {
+    labels: "Vulnerabilities Priorizated",
+    value: "4.0k",
+    percentage: "14%",
+  },
 ];
 export const findingPieChartData = {
   labels: "Total",
-  value: '6.4587',
- };
+  value: "6.4587",
+};
+
+
+// FINDINGS REPORT LINE CHART  DATA
+export const findingsLineChartList = [
+  {
+    series: [
+      {
+        name: "Findings Without action plan",
+        data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
+      },
+      {
+        name: "Findings With acction plan",
+        data: [1500, 3900, 4800, 9000, 6000, 4000, 6000],
+      },
+    ],
+    categories: [
+      "Jun 4",
+      "Jun 5",
+      "Jun 6",
+      "Jun 7",
+      "Jun 8",
+      "Jun 9",
+      "Jun 10",
+      "Jun 11",
+      "Jun 12",
+    ],
+    optionsData: {
+      min: 0,
+      max: 10000,
+    },
+  },
+];
