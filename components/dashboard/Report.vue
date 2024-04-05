@@ -12,7 +12,7 @@
             </div>
         </div>
         <!-- Line graph -->
-        <FindingsReportLineGraph />
+        <DashboardReportLineGraph />
         <!-- Progress bar -->
         <CommonChartProgressBar />
     </div>
