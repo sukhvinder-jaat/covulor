@@ -9,14 +9,16 @@ import Conector from "../components/icons/Conector.vue";
 // SIDEBAR ICONS TYPES
 interface DropdownItem {
   title: string;
-  content: { subLink: string; link: string }[];
+  content?: { subLink: string; link: string }[];
   svg: any;
+  href: string;
 }
 
 // SideBar Dropdown Values
 export const dropdownSidebarList: DropdownItem[] = [
   {
     title: "Dashboards",
+    href: "#Dashboards",
     content: [
       { subLink: "Reports", link: "#report" },
       { subLink: "SLSA", link: "#slsa" },
@@ -27,32 +29,17 @@ export const dropdownSidebarList: DropdownItem[] = [
   },
   {
     title: "Repositories",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "#Repositories",
     svg: Repositories,
   },
   {
     title: "Findings",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "#Findings",
     svg: Findings,
   },
   {
     title: "Conector Page",
-    content: [
-      { subLink: "Reports", link: "#report" },
-      { subLink: "SLSA", link: "#slsa" },
-      { subLink: "Software Supply Chain", link: "#software" },
-      { subLink: "OWASP ", link: "#owsap" },
-    ],
+    href: "#Conector",
     svg: Conector,
   },
 ];
@@ -263,22 +250,24 @@ export const findingCircularChartData = {
   colors: ["#8220FF", "#05CB0C", "#FD9B3D", "#E6D2FF"],
 };
 
-export const findingChartData = [{
-  labels: "Total Findings",
-  value: '17k',
-  percentage: '100%'
-},
-{
-  labels: "Vulnerabilities Aggregated",
-  value: '13k',
-  percentage: '35%'
-}, {
-  labels: "Vulnerabilities Priorizated",
-  value: '4.0k',
-  percentage: '14%'
-}
+export const findingChartData = [
+  {
+    labels: "Total Findings",
+    value: "17k",
+    percentage: "100%",
+  },
+  {
+    labels: "Vulnerabilities Aggregated",
+    value: "13k",
+    percentage: "35%",
+  },
+  {
+    labels: "Vulnerabilities Priorizated",
+    value: "4.0k",
+    percentage: "14%",
+  },
 ];
 export const findingPieChartData = {
   labels: "Total",
-  value: '6.4587',
- };
+  value: "6.4587",
+};
