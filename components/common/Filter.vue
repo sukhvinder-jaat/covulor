@@ -1,7 +1,7 @@
 <template>
     <UPopover :popper="{ placement: 'bottom-start' }">
-        <UButton color="white" trailing-icon="i-heroicons-funnel-16-solid" label="Filter" />
-
+        <UButton color="white" icon="i-heroicons-funnel-16-solid" label="Filter" />
+        
         <template #panel>
             <div
                 class="min-h-[322px] w-[504px] ps-5 pr-4 pt-4 border border-thistle rounded-md shadow-[0px_5px_8px_0px_#00000033] relative">
