@@ -59,6 +59,7 @@ module.exports = {
         lightGainsBor: "#E6E6E6",
         midnightBlue: "#0C063A",
         iron: "#D6D6D6",
+        mediumPurple:"#C08FFF",
       },
     },
   },
