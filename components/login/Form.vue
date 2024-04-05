@@ -15,20 +15,34 @@
     </div>
     <div class="relative">
       <UInput
-        type="password"
         placeholder="Password"
         padded
         size="lg"
         v-model="password"
+        :type="passwordFieldType"
         rounded="xl"
         required
       >
       </UInput>
-      <span v-if="passwordError" class="error-text leading-none"
-        >Password must contain 1 digit, 1 lowercase, 1 uppercase, and be 6-20
-        characters long.</span
+      <span
+        v-if="!showPassword"
+        class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
+        @click="togglePasswordVisibility"
       >
+        <Icon name="i-heroicons:eye-slash" color="black" />
+      </span>
+      <span
+        v-else
+        class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
+        @click="togglePasswordVisibility"
+      >
+        <Icon name="i-heroicons:eye" color="black" />
+      </span>
     </div>
+    <span v-if="passwordError" class="error-text leading-none"
+      >Password must contain 1 digit, 1 lowercase, 1 uppercase, and be 6-20
+      characters long.</span
+    >
     <div class="pt-[25px] pb-[72px]">
       <URadio>
         <template #label>
@@ -52,6 +66,7 @@ const email = ref("");
 const password = ref("");
 const emailError = ref(false);
 const passwordError = ref(false);
+const showPassword = ref(false);
 
 const login = () => {
   // Reset error flags
@@ -84,6 +99,14 @@ const login = () => {
   console.log("Email:", email.value);
   console.log("Password:", password.value);
 };
+
+const togglePasswordVisibility = () => {
+  showPassword.value = !showPassword.value;
+};
+
+const passwordFieldType = computed(() =>
+  showPassword.value ? "text" : "password"
+);
 </script>
 
 <style scoped>
