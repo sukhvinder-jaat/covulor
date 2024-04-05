@@ -14,12 +14,12 @@
     <div class="mt-7 flex items-center justify-between flex-col xl:flex-row overflow- x-hidden">
       <div class="overflow-x-auto w-[300px] min-[500px]:w-[430px] sm:w-full">
         <div class="overflow-x-auto overflow-y-hidden w-[650px] min-[500px]:w-[650px] sm:w-full relative">
-          <FindingsFunnelChart />
+          <DashboardFunnelChart />
         </div>
       </div>
       <!-- Finding circular chart component -->
       <div class="w-full mt-6 lg:mt-0 lg:w-[345px] 2xl:w-[450px] flex justify-center">
-        <FindingsCircularChart />
+        <DashboardCircularChart />
       </div>
     </div>
   </div>
