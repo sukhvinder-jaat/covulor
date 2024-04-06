@@ -377,6 +377,7 @@ export const commonFindingDetails = [
     remediationTitle: "AI Remedation",
     remediationDescription:
       "I wrapped the content of the file with base64 encoding/decoding to prevent injection through unserialize. This operation will ensure that, even if an attacker somehow manages to inject malicious code into the cache file, it will not be executed when the cache file is read back into the program. Instead, any injected code will merely be treated as base64 encoded string, not executable code.",
+    link: { title: "More Details", textColor: "text-purple" },
     buttonText: "Create AI Remedation",
     remediationDetails: "LLM Generated Remediations",
   },
@@ -388,6 +389,7 @@ export const commonFindingDetails = [
     remediationTitle: "Observations",
     remediationDescription:
       "The repository is primarily created for educational purposes aimed at learning web application security. The project uses PHP as its main language and does not deal with any confidential data as per the available structure. However, files like .gitignore, .htaccess, Vagrantfile, webgoat.sql etc. require special attention from a security standpoint. The application, however, being deliberately vulnerable poses potential risks, and it's necessary for the users to be aware of insecurities and potential harm they could bring in a production environment.",
+    link: { title: "No Confidential Data Treated", textColor: "text-lightGreen" },
     buttonText: "Link",
     remediationDetails:
       "A deliberately vulnerable web application for learning web application security.",

@@ -34,7 +34,6 @@
         usually have, leading to malicious activities such as data leakage,
         unauthorized access or system takeover.
       </p>
-      <p class="font-bold font-roboto text-xl pt-2 text-purple">More Details</p>
     </div>
     <div class="sm:max-w-[435px] py-7 lg:pe-7 px-5 lg:ps-[46px] bg-[#F4F4F4]">
       <p>
