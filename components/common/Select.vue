@@ -1,17 +1,24 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue';
+import { defineProps, defineEmits, ref } from 'vue';
 
-const countries = ['United States', 'Canada', 'Mexico'];
+interface Option {
+    label: string;
+    value: string;
+}
 
-const props = defineProps({
-    options: Array,
-});
-const country = ref(props.options ? props.options[0] : null);
+const props = defineProps<{
+    options: any;
+}>();
+
+const emit = defineEmits<{
+    (e: 'update:modelValue', value: string): void;
+}>();
+
+const country = ref(props.options ? props.options[0].value : null);
 </script>
 
 <template>
-    <div class=" w-full">
-        <USelect  icon="i-material-symbols-light-arrow-drop-down-rounded"
-            :options="options" />
+    <div class="w-full">
+        <USelect :options="options" :modelValue="country" @update:modelValue="(value: string) => (country = value)" />
     </div>
 </template>
