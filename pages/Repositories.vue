@@ -11,7 +11,7 @@
                 <div class=" relative">
                     <UPopover class="table_popup">
                         <div label="Open"
-                            class="flex gap-x-2 max-h-[25px] h-full max-w-[119px] rounded-[10px] items-center w-full">
+                            class="flex gap-x-2 pr-1 max-h-[25px] h-full max-w-[119px] rounded-[10px] items-center w-full">
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="13" cy="13" r="13" fill="#8220FF" />
@@ -24,7 +24,7 @@
 
                         <template #panel="{ close }">
                             <div class="relative">
-                                <svg class="absolute  cursor-pointer z-10 top-[-3px] left-[-9px]" label="Close"
+                                <svg class="absolute cursor-pointer z-10 top-[-3px] left-[-15px]" label="Close"
                                     @click="close" width="22" height="24" viewBox="0 0 22 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_6031_1531)">
@@ -51,10 +51,9 @@
                                     </defs>
                                 </svg>
 
-                                <div
-                                    class=" bg-white p-[14px] ps-7 min-w-[154px] rounded-md absolute left-[-154px] top-2">
-                                    <ul class=" flex flex-col gap-y-2 items-start justify-star list-none">
-                                        <li class="font-roboto text-black font-medium text-sm"
+                                <div class=" bg-white p-[10px]  min-w-[154px] rounded-md absolute left-[-154px] top-2">
+                                    <ul class=" flex flex-col  items-start justify-star list-none">
+                                        <li class="font-roboto text-black font-medium w-full px-2 py-[5px] text-sm hover:bg-[#F2F0F9] rounded transition-all duration-200 ease-in-out"
                                             v-for="(tagOption, i) in tagsOption" :key="i">
                                             {{ tagOption }}
                                         </li>
@@ -66,9 +65,7 @@
                 </div>
             </div>
             <span class="w-full bg-black opacity-10 h-[1px] absolute top-[65px]"></span>
-
         </div>
-
         <div class="mt-16 flex gap-3 sm:gap-0 justify-between items-center">
             <div class=" flex gap-3 sm:gap-[18px] items-center w-6/12">
                 <CommonFilter />
