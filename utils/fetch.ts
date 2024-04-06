@@ -2,6 +2,7 @@ export const get = "GET";
 export const post = "POST";
 
 const BackendHostUrl = 'http://mock-api.plexicus.com:8080';
+const token = process.env.ACCESS_TOKEN;
 
 export const fetchRequestHandler = async function (
     method: string,
@@ -12,9 +13,9 @@ export const fetchRequestHandler = async function (
         "Content-Type": "application/json",
     };
     // Is auth is needed, add Authorization header
-    // if (auth) {
-    //     headers["Authorization"] = `Bearer ${jwt}`;
-    // }
+    if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+    }
     const options: any = {
         method: method,
         headers: headers,
