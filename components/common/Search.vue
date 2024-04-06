@@ -11,8 +11,9 @@
         align-items: center;
 }
 .icon_search input{
-border-color:#BB89FF;
+border:1px solid #BB89FF !important;
 padding: 7.5px 0px 7.5px 40px;
+box-shadow: none !important;
 }
 ::placeholder {
     color: black !important;

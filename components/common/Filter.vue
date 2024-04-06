@@ -31,7 +31,7 @@
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
                                         class=" text-black opacity-50 w-[15px] h-[14px]  cursor-pointer" />
-                                </div> cursor-pointer
+                                </div>
                             </div>
                             <div class=" mt-4 sm:flex gap-6 items-center justify-between">
                                 <div class=" w-6/12 flex items-center">
