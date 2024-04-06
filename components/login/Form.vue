@@ -10,7 +10,7 @@
       </UInput>
       <span v-if="!showPassword" class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
         @click="togglePasswordVisibility">
-        <Icon name="i-heroicons:eye-slash" color="black" />
+        <Icon name="i-heroicons:eye-slash" color="black" /> 
       </span>
       <span v-else class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
         @click="togglePasswordVisibility">

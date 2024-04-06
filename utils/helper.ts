@@ -238,21 +238,18 @@ export const dashboardLineChartList = [
         data: [1500, 4000, 5000, 9000, 6000, 4000, 6000],
       },
     ],
-    categories: [
-      "Jan 4",
-      "Jan 5",
-      "Jan 6",
-      "Jan 7",
-      "Jan 8",
-      "Jan 9",
-      "Jan 10",
-      "Jan 11",
-      "Jan 12",
+    dates: [
+      "2023-06-06",
+      "2023-07-13",
+      "2023-08-19",
+      "2023-09-25",
+      "2023-11-01",
+      "2023-12-08",
+      "2024-01-14",
+      "2024-02-20",
+      "2024-03-28",
+      "2024-05-04"
     ],
-    optionsData: {
-      min: 0,
-      max: 10000,
-    },
   },
 ];
 
@@ -303,21 +300,18 @@ export const findingsLineChartList = [
         data: [1500, 3900, 4800, 9000, 6000, 4000, 6000],
       },
     ],
-    categories: [
-      "Jun 4",
-      "Jun 5",
-      "Jun 6",
-      "Jun 7",
-      "Jun 8",
-      "Jun 9",
-      "Jun 10",
-      "Jun 11",
-      "Jun 12",
+    dates: [
+      "2023-06-06",
+      "2023-07-13",
+      "2023-08-19",
+      "2023-09-25",
+      "2023-11-01",
+      "2023-12-08",
+      "2024-01-14",
+      "2024-02-20",
+      "2024-03-28",
+      "2024-05-04"
     ],
-    optionsData: {
-      min: 0,
-      max: 10000,
-    },
   },
 ];
 export interface ContextData {
@@ -377,6 +371,7 @@ export const commonFindingDetails = [
     remediationTitle: "AI Remedation",
     remediationDescription:
       "I wrapped the content of the file with base64 encoding/decoding to prevent injection through unserialize. This operation will ensure that, even if an attacker somehow manages to inject malicious code into the cache file, it will not be executed when the cache file is read back into the program. Instead, any injected code will merely be treated as base64 encoded string, not executable code.",
+    link: { title: "More Details", textColor: "text-purple" },
     buttonText: "Create AI Remedation",
     remediationDetails: "LLM Generated Remediations",
   },
@@ -388,8 +383,20 @@ export const commonFindingDetails = [
     remediationTitle: "Observations",
     remediationDescription:
       "The repository is primarily created for educational purposes aimed at learning web application security. The project uses PHP as its main language and does not deal with any confidential data as per the available structure. However, files like .gitignore, .htaccess, Vagrantfile, webgoat.sql etc. require special attention from a security standpoint. The application, however, being deliberately vulnerable poses potential risks, and it's necessary for the users to be aware of insecurities and potential harm they could bring in a production environment.",
+    link: {
+      title: "No Confidential Data Treated",
+      textColor: "text-lightGreen",
+    },
     buttonText: "Link",
     remediationDetails:
       "A deliberately vulnerable web application for learning web application security.",
   },
+];
+
+export const dataImpoterList = [
+  { title: "Title:", content: "Command Injection - lastrss.php: 71" },
+  { title: "CWE:", content: '["CWE-77","CWE-78"]' },
+  { title: "Impact Original line:", content: "71" },
+  { title: "File path:", content: "app/plugin/lastrss.php" },
+  { title: "Type:", content: "code_weakness" },
 ];
