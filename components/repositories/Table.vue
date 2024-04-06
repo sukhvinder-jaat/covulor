@@ -78,7 +78,13 @@
 
             <template #panel="{ close }">
               <div class="relative">
-                <span label="Close" @click="close"> <IconsPopupCross /> </span>
+                <span
+                  label="Close"
+                  @click="close"
+                  class="absolute top-[-12%] end-[-7%] cursor-pointer"
+                >
+                  <IconsPopupCross />
+                </span>
                 <div
                   class="bg-lawnGreen p-[14px] ps-7 min-w-[154px] rounded-md"
                 >
