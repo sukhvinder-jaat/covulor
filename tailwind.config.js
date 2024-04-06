@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -66,6 +65,8 @@ module.exports = {
         thistle: "#C6C2DE",
         ghostWhiteLight: "#F2F0F9",
         lightToBlack: "#25213B",
+        hawkasBlue: "#DCDCFC",
+        turquoiseBlue: "#4CD7F6",
         grayLight: "#F4F4F4",
       },
       backgroundImage: {
@@ -73,6 +74,7 @@ module.exports = {
       },
       boxShadow: {
         "login-form": "0px 20px 24px 0px #8D8D8D29",
+        "cross-popp": " 0px 0px 2px 0px #00000040",
       },
     },
   },
