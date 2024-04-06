@@ -19,9 +19,26 @@
 </template>
 
 <script setup lang="ts">
+import { toast } from "vue3-toastify";
 // Data
 const title = ['Diary', 'Diary ', ' Diary']
 const selected = ref(title[0])
+
+const getFindingsChatData = async () => {
+    await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=06-06-2023&end_date=06-06-2024`);
+}
+onMounted(async () => {
+    try {
+        await getFindingsChatData();
+    } catch (e: any) {
+        // Display an error toast if an exception occurs
+        toast.error(e.message, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_RIGHT,
+        });
+    }
+})
+
 </script>
 
 

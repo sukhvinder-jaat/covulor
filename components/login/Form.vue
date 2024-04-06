@@ -48,6 +48,7 @@ const login = async () => {
   // Validate email
   if (!email.value || !validateEmail(email.value)) {
     emailError.value = true;
+    return
   }
 
   // Validate password
@@ -63,7 +64,7 @@ const login = async () => {
   }
 
   // Fetch API
-  await fetchRequestHandler(post, `/login`, { data });
+  await fetchRequestHandler(post, LOGIN, { data });
 };
 
 // Function to toggle password visibility
