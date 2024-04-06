@@ -36,8 +36,23 @@
       </p>
       <p class="font-bold font-roboto text-xl pt-2 text-purple">More Details</p>
     </div>
-    <div class="sm:max-w-[435px]">
-        <p class="font-roboto font-bold text-xl text-midnightBlue">Title: <span class="font-normal">Command Injection - lastrss.php: 71</span></p>
+    <div class="sm:max-w-[435px] xl:me-10 md:ms-5">
+      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
+        Title:
+        <span class="font-normal">Command Injection - lastrss.php: 71</span>
+      </p>
+      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
+        CWE:<span class="font-normal">["CWE-77","CWE-78"] </span>
+      </p>
+      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
+        Impact Original line: <span class="font-normal"> 71</span>
+      </p>
+      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
+        File path: <span class="font-normal">app/plugin/lastrss.php</span>
+      </p>
+      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
+        Type: <span class="font-normal">code_weakness</span>
+      </p>
     </div>
   </div>
 </template>

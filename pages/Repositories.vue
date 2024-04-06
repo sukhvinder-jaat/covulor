@@ -1,6 +1,6 @@
 <template class=" overflow-hidden">
     <div class="lg:pl-[54px] lg:pr-[63px] md:px-10 px-3 sm:px-5 pt-[36px] w-full ">
-       <RepositoriesHeader/>
+        <RepositoriesHeader />
         <div class="mt-16 flex gap-3 sm:gap-0 justify-between items-center">
             <div class=" flex gap-3 sm:gap-[18px] items-center w-6/12">
                 <CommonFilter />
