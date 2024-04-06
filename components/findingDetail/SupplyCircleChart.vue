@@ -17,7 +17,7 @@
       <ClientOnly>
         <VueApexCharts
           type="radialBar"
-          :options="options"
+          :options="chartOptions(dataItem.color)"
           :series="[dataItem.value]"
           :width="120"
           :height="170"
@@ -39,7 +39,7 @@ const options = {
   plotOptions: {
     radialBar: {
       hollow: {
-        size: "50%",
+        size: "45%",
         color: "#E6E6E6",
       },
       dataLabels: {
@@ -57,7 +57,13 @@ const options = {
       },
     },
   },
-  colors: ["#05CB0C"],
+};
+
+const chartOptions = (color: string) => {
+  return {
+    ...options,
+    colors: [color],
+  };
 };
 </script>
 

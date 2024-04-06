@@ -52,7 +52,7 @@
         </template>
       </URadio>
     </div>
-    <UButton block size="lg" @click="login"
+    <UButton class="" block size="lg" @click="login"
       ><span class="text-base">Login</span></UButton
     >
   </form>

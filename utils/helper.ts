@@ -248,7 +248,7 @@ export const dashboardLineChartList = [
       "2024-01-14",
       "2024-02-20",
       "2024-03-28",
-      "2024-05-04"
+      "2024-05-04",
     ],
   },
 ];
@@ -310,7 +310,7 @@ export const findingsLineChartList = [
       "2024-01-14",
       "2024-02-20",
       "2024-03-28",
-      "2024-05-04"
+      "2024-05-04",
     ],
   },
 ];
@@ -404,30 +404,37 @@ export const dataImpoterList = [
 export const findingSupplyChainChart = [
   {
     value: "100",
+    color: "#05CB0C",
     title: "SAST",
   },
   {
     value: "100",
+    color: "#05CB0C",
     title: "Secrets / PII",
   },
   {
     value: "100",
+    color: "#05CB0C",
     title: "IaC security",
   },
   {
     value: "100",
+    color: "#05CB0C",
     title: "OpenSource Security (SCA)",
   },
   {
     value: "100",
+    color: "#05CB0C",
     title: "License compliance",
   },
   {
     value: "100",
+    color: "#F91212",
     title: "SBOM",
   },
   {
     value: "100",
+    color: "#F91212",
     title: "Cloud Security Posture Management (CSPM)",
   },
 ];
