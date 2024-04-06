@@ -1,5 +1,5 @@
 <template>
-    <div class=" ">
+    <div class="filter_icon ">
         <UPopover :popper="{ placement: 'bottom-start' }">
             <UButton color="white" icon="i-heroicons-funnel-16-solid" label="Filter" class="min-h-[39px]" />
             <template #panel>
@@ -30,8 +30,8 @@
                                         <CommonSelect :options="countries" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
-                                </div>
+                                        class=" text-black opacity-50 w-[15px] h-[14px]  cursor-pointer" />
+                                </div> cursor-pointer
                             </div>
                             <div class=" mt-4 sm:flex gap-6 items-center justify-between">
                                 <div class=" w-6/12 flex items-center">
@@ -45,7 +45,7 @@
                                         <CommonSelect :options="countries" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
+                                        class=" text-black opacity-50 w-[15px] h-[14px] cursor-pointer" />
                                 </div>
                             </div>
                             <div class=" mt-4 sm:flex gap-6 items-center justify-between">
@@ -59,7 +59,7 @@
                                         <CommonSelect :options="countries" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
+                                        class=" text-black opacity-50 w-[15px] h-[14px] cursor-pointer" />
                                 </div>
                             </div>
                         </form>
@@ -76,5 +76,9 @@
 </template>
 <script setup lang="ts">
 const countries = ['United States', 'Canada', 'Mexico']
-
 </script>
+<style>
+.filter_icon .i-heroicons-funnel-16-solid {
+    color: #8220FF;
+}
+</style>
