@@ -1,4 +1,4 @@
-<template>
+<template class=" overflow-hidden" >
     <div class="lg:pl-[54px] lg:pr-[63px] md:px-10 px-5 pt-[36px] w-full relative">
         <span class=" w-full bg-black opacity-10 h-[1px] block absolute max-w-[1073px] top-[100px]"></span>
 
