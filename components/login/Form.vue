@@ -1,31 +1,60 @@
 <template>
   <form class="pt-[42px]">
     <div class="pb-8 input_custom_login">
-      <UInput placeholder="Email" padded size="lg" v-model="email" required class="!rounded-xl" />
-      <span v-if="emailError" class="error-text">{{ getEmailErrorMessage }}</span>
+      <UInput
+        placeholder="Email"
+        padded
+        size="lg"
+        v-model="email"
+        required
+        class="!rounded-xl"
+      />
+      <span v-if="emailError" class="error-text">{{
+        getEmailErrorMessage
+      }}</span>
     </div>
     <div class="relative input_custom_login">
-      <UInput placeholder="Password" padded size="lg" v-model="password" :type="passwordFieldType" rounded="xl"
-        required>
+      <UInput
+        placeholder="Password"
+        padded
+        size="lg"
+        v-model="password"
+        :type="passwordFieldType"
+        rounded="xl"
+        required
+      >
       </UInput>
-      <span v-if="!showPassword" class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
-        @click="togglePasswordVisibility">
-        <Icon name="i-heroicons:eye-slash" color="black" /> 
+      <span
+        v-if="!showPassword"
+        class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
+        @click="togglePasswordVisibility"
+      >
+        <Icon name="i-heroicons:eye-slash" color="black" />
       </span>
-      <span v-else class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
-        @click="togglePasswordVisibility">
+      <span
+        v-else
+        class="absolute top-1/2 right-4 w-5 -translate-y-1/2 cursor-pointer"
+        @click="togglePasswordVisibility"
+      >
         <Icon name="i-heroicons:eye" color="black" />
       </span>
     </div>
-    <span v-if="passwordError" class="error-text leading-none">{{ getPasswordErrorMessage }}</span>
-    <div class="pt-[25px] pb-[72px]">
-      <URadio modelValue>
+    <span v-if="passwordError" class="error-text leading-none">{{
+      getPasswordErrorMessage
+    }}</span>
+    <div class="pt-[25px] pb-[72px] radio_input">
+      <URadio modelValue color="indigo" size="lg">
         <template #label>
-          <span class="font-roboto font-normal text-sm text-darkBlack cursor-pointer">Remember Me</span>
+          <span
+            class="font-roboto font-normal text-sm text-darkBlack cursor-pointer"
+            >Remember Me</span
+          >
         </template>
       </URadio>
     </div>
-    <UButton block size="lg" @click="login"><span class="text-base">Login</span></UButton>
+    <UButton block size="lg" @click="login"
+      ><span class="text-base">Login</span></UButton
+    >
   </form>
 </template>
 
@@ -48,20 +77,20 @@ const login = async () => {
   // Validate email
   if (!email.value || !validateEmail(email.value)) {
     emailError.value = true;
-    return
+    return;
   }
 
   // Validate password
   if (!password.value || !validatePassword(password.value)) {
     passwordError.value = true;
-    return
+    return;
   }
 
   // Prepare data for API request
   const data = {
     email: email.value,
     password: password.value,
-  }
+  };
 
   // Fetch API
   await fetchRequestHandler(post, LOGIN, { data });
@@ -73,11 +102,16 @@ const togglePasswordVisibility = () => {
 };
 
 // Computed properties for error messages and password field type
-const getEmailErrorMessage = computed(() => email.value === '' ? 'Enter an email address' : 'Please Enter a valid Email');
-const getPasswordErrorMessage = computed(() => password.value === '' ? 'Enter a password' : 'Please enter correct password');
-const passwordFieldType = computed(() => showPassword.value ? "text" : "password");
+const getEmailErrorMessage = computed(() =>
+  email.value === "" ? "Enter an email address" : "Please Enter a valid Email"
+);
+const getPasswordErrorMessage = computed(() =>
+  password.value === "" ? "Enter a password" : "Please enter correct password"
+);
+const passwordFieldType = computed(() =>
+  showPassword.value ? "text" : "password"
+);
 </script>
-
 
 <style>
 .error-text {
@@ -96,5 +130,11 @@ const passwordFieldType = computed(() => showPassword.value ? "text" : "password
 
 .error-container {
   margin-top: 10px;
+}
+.radio_input div{
+  align-items: center !important;
+}
+.radio_input .form-radio:checked{
+ background-color: #8220FF !important; 
 }
 </style>
