@@ -8,17 +8,17 @@
       Data from importer
     </h2>
     <p
-      class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
+      class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5 lg:me-20 md:me-4"
     >
       Date: 2024-03-06T0 4:08:00.000Z
     </p>
   </div>
   <div
-    class="px-10 py-10 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11 md:items-center gap-5"
+    class="sm:p-10 p-5 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11 md:items-center gap-5"
   >
     <div class="md:w-1/2 md:max-w-[467px] xl:ms-1">
       <h2
-        class="font-roboto text-midnightBlue font-bold text-[28px] !tracking-[-2%] pb-[15px]"
+        class="font-roboto text-midnightBlue font-bold md:text-[28px] text-xl !tracking-[-2%] pb-[15px]"
       >
         Description
       </h2>
@@ -39,7 +39,7 @@
       <p
         v-for="(item, index) in dataImpoterList"
         :key="index"
-        class="font-roboto font-bold xl:text-xl text-lg text-midnightBlue"
+        class="font-roboto font-bold xl:text-xl md:text-lg text-base text-midnightBlue"
       >
         {{ item.title }} <span class="font-normal">{{ item.content }}</span>
       </p>
