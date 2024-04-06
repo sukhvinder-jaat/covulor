@@ -72,7 +72,7 @@ module.exports = {
       },
       boxShadow: {
         "login-form": "0px 20px 24px 0px #8D8D8D29",
-        
+        "cross-popp":" 0px 0px 2px 0px #00000040",
       },
     },
   },
