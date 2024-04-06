@@ -1,7 +1,5 @@
 <template>
   <svg
-    class="absolute top-[-12%] end-[-7%] cursor-pointer"
-   
     width="22"
     height="24"
     viewBox="0 0 22 24"
@@ -55,8 +53,3 @@
     </defs>
   </svg>
 </template>
-<!-- <script setup lang="ts">
-defineProps({
-  close: Function as () => void,
-});
-</script> -->
