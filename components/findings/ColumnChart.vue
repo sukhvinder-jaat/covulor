@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="overflow-auto">
-            <div class="sm:w-auto overflow-auto w-[700px] column_chart">
+            <div class="sm:w-full overflow-auto w-[700px] column_chart">
                 <ClientOnly>
                     <VueApexCharts type="bar" :height="height" :options="chartOptions" :series="series"></VueApexCharts>
                 </ClientOnly>
@@ -76,13 +76,13 @@ const chartOptions = {
     }
 };
 const series = [{
-    data: [40, 55, 41, 67, 22, 43, 21, 33, 25, 31, 17, 65, 35, 44, 55, 41, 17, 22, 43, 21, 33, 25, 31, 57, 65]
+    name: 'Plexilus /',
+    data: [100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 130]
 }]
 </script>
 <style>
 .vue-apexcharts {
     height: 280px;
-    /* or any height you desire */
 }
 
 .apexcharts-series path {
@@ -109,7 +109,8 @@ const series = [{
 }
 
 .apexcharts-toolbar,
-.column_chart .apexcharts-tooltip-title,.column_chart .apexcharts-tooltip-marker {
+.column_chart .apexcharts-tooltip-title,
+.column_chart .apexcharts-tooltip-marker {
     display: none !important;
 }
 </style>
