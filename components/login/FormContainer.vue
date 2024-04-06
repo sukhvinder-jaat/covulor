@@ -5,14 +5,14 @@
     <div
       class="lg:max-w-[465px] max-w-[320px] flex flex-col items-center md:items-start mx-auto md:mx-0"
     >
-      <a href="/">
+      <NuxtLink to="/">
         <img
           class="lg:w-[323px] w-[220px]"
           src="/public/assets/images/logo-light-theme.png"
           width="323"
           height="103"
           alt="logo"
-      /></a>
+      /></NuxtLink>
       <p
         class="font-poppins font-normal lg:text-[21px] text-base text-white pt-5 text-center md:text-start"
       >
@@ -56,7 +56,7 @@
       </p>
       <p class="text-center font-roboto text-xs font-normal px-[14px] bg-white">
         <span class="text-darkBlack">Don't Have An Account?</span>
-        <a class="!text-purpleBlue" href="/">Sign Up</a>
+        <NuxtLink class="!text-purpleBlue" to="/">Sign Up</NuxtLink>
       </p>
     </div>
   </div>
