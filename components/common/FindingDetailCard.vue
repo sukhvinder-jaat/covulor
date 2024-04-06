@@ -23,7 +23,7 @@
         >{{ tagsecond.text }}</span
       >
     </div>
-    <div :class="hideText + ' flex items-center gap-1 ps-2.5 sm:ps-0'">
+    <div :class="hideText + ' flex items-center gap-1 ps-2.5 sm:ps-0 xl:pe-10 pe-3 '">
       <p
         class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%]"
       >
@@ -36,11 +36,11 @@
     </div>
   </div>
   <div
-    class="px-10 py-10 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11"
+    class="sm:p-10 p-5 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11"
   >
     <div class="md:w-1/2 md:max-w-[467px] xl:ms-1">
       <h2
-        class="font-roboto text-midnightBlue font-bold text-[28px] !tracking-[-2%] pb-[15px]"
+        class="font-roboto text-midnightBlue font-bold md:text-[28px] text-xl !tracking-[-2%] pb-[15px]"
       >
         {{ remediationTitle }}
       </h2>
