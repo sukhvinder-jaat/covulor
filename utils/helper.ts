@@ -406,3 +406,34 @@ export const dataImpoterList = [
   { title: "File path:", content: "app/plugin/lastrss.php" },
   { title: "Type:", content: "code_weakness" },
 ];
+// finding detai software supply chain
+export const findingSupplyChainChart = [
+  {
+    value: "100",
+    title: "SAST",
+  },
+  {
+    value: "100",
+    title: "Secrets / PII",
+  },
+  {
+    value: "100",
+    title: "IaC security",
+  },
+  {
+    value: "100",
+    title: "OpenSource Security (SCA)",
+  },
+  {
+    value: "100",
+    title: "License compliance",
+  },
+  {
+    value: "100",
+    title: "SBOM",
+  },
+  {
+    value: "100",
+    title: "Cloud Security Posture Management (CSPM)",
+  },
+];

@@ -4,7 +4,7 @@
     class="flex mt-8 flex-wrap w-full 2xl:gap-0 bg-white justify-evenly lg:justify-start xl:justify-between 2xl:justify-start p-6 rounded-lg shadow-[0px_2px_20px_0px_#0000000D] software_card"
   >
     <div
-      v-for="(dataItem, index) in supplyChainChart"
+      v-for="(dataItem, index) in findingSupplyChainChart"
       :key="index"
       class="chart w-[13%] min-w-[135px] flex flex-col justify-center"
     >
@@ -43,7 +43,7 @@ const options = {
         color: "#E6E6E6",
       },
       dataLabels: {
-        show: true,
+        show: false,
         name: {
           show: false,
         },

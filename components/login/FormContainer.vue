@@ -12,7 +12,7 @@
       </p>
     </div>
     <div
-      class="sm:w-[460px] max-w-[460px] w-4/5 min-w-[292px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8">
+      class="sm:w-[460px] max-w-[460px] h-full w-4/5 max-[550px]:w-full min-w-[292px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8 2xl:mx-40">
       <h2 class="text-center font-roboto font-semibold md:text-2xl text-xl text-darkBlack pb-[38px]">
         Login To Your Account
       </h2>
