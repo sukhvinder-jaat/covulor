@@ -1,6 +1,6 @@
 <template>
   <form class="pt-[42px]">
-    <div class="pb-8">
+    <div class="pb-8 input_custom_login">
       <UInput
         placeholder="Email"
         padded
@@ -13,7 +13,7 @@
         >Please enter a valid email</span
       >
     </div>
-    <div class="relative">
+    <div class="relative input_custom_login">
       <UInput
         placeholder="Password"
         padded
@@ -44,7 +44,7 @@
       characters long.</span
     >
     <div class="pt-[25px] pb-[72px]">
-      <URadio>
+      <URadio modelValue>
         <template #label>
           <span
             class="font-roboto font-normal text-sm text-darkBlack cursor-pointer"
@@ -61,61 +61,56 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-
 const email = ref("");
 const password = ref("");
 const emailError = ref(false);
 const passwordError = ref(false);
 const showPassword = ref(false);
-
 const login = () => {
   // Reset error flags
   emailError.value = false;
   passwordError.value = false;
-
   // Check for empty fields
   if (!email.value.trim()) {
     emailError.value = true;
   }
-
   // Email format validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email.value)) {
     emailError.value = true;
   }
-
   // Check for password format
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
   if (!passwordRegex.test(password.value)) {
     passwordError.value = true;
   }
-
   // If any input is empty or email format is invalid, return without attempting login
   if (emailError.value || passwordError.value) {
     return;
   }
-
   // Logging input data to the console
   console.log("Email:", email.value);
   console.log("Password:", password.value);
 };
-
 const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value;
 };
-
 const passwordFieldType = computed(() =>
   showPassword.value ? "text" : "password"
 );
 </script>
-
-<style scoped>
+<style>
 .error-text {
   color: red;
   font-size: 12px;
   line-height: 10px;
 }
-
+.input_custom_login input {
+  @apply !ring-0 border border-mediumlightgray  !rounded-xl;
+}
+.input_custom_login input:focus {
+  @apply !ring border-transparent !rounded-xl;
+}
 .error-container {
   margin-top: 10px;
 }

@@ -12,7 +12,7 @@
             </div>
         </div>
         <!-- Line graph -->
-        <DashboardReportLineGraph />
+        <CommonReportLineGraph :LineChartList="dashboardLineChartList" :isLegendVisible="true" />
         <!-- Progress bar -->
         <CommonChartProgressBar />
     </div>

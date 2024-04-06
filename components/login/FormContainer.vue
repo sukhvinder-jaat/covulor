@@ -5,14 +5,14 @@
     <div
       class="lg:max-w-[465px] max-w-[320px] flex flex-col items-center md:items-start mx-auto md:mx-0"
     >
-      <a href="/">
+      <NuxtLink to="/">
         <img
           class="lg:w-[323px] w-[220px]"
           src="/public/assets/images/logo-light-theme.png"
           width="323"
           height="103"
           alt="logo"
-      /></a>
+      /></NuxtLink>
       <p
         class="font-poppins font-normal lg:text-[21px] text-base text-white pt-5 text-center md:text-start"
       >
@@ -21,25 +21,25 @@
       </p>
     </div>
     <div
-      class="sm:w-[460px] max-w-[460px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8"
+      class="sm:w-[460px] max-w-[460px] w-4/5 min-w-[292px] mx-auto md:mx-0 px-8 pt-[47px] pb-[34px] shadow-login-form bg-white rounded-lg md:mt-0 mt-8"
     >
       <h2
-        class="text-center font-roboto font-semibold text-2xl text-darkBlack pb-[38px]"
+        class="text-center font-roboto font-semibold md:text-2xl text-xl text-darkBlack pb-[38px]"
       >
         Login To Your Account
       </h2>
-      <div
-        class="p-3 w-full border border-mediumlightgray rounded-xl relative mb-10"
+      <NuxtLink to="/"
+        class="p-3 w-full border border-mediumlightgray rounded-xl relative mb-10 block"
       >
-        <h3
+        <p
           class="font-roboto font-normal text-sm text-darkBlack text-center w-full"
         >
           Login With Google
-          <span class="absolute top-1/2 left-[14px] -translate-y-1/2"
-            ><IconsGoogle
-          /></span>
-        </h3>
-      </div>
+        </p>
+        <span class="absolute top-1/2 left-[14px] -translate-y-1/2"
+          ><IconsGoogle
+        /></span>
+      </NuxtLink>
       <div class="flex items-center">
         <p
           class="text-center font-roboto text-xs text-darkBlack font-normal px-[14px] bg-white relative z-10 inline-block mx-auto"
@@ -50,13 +50,13 @@
       <hr class="-mt-[9px] mb-[9px]" />
       <LoginForm />
       <p
-        class="text-center font-roboto text-xs text-darkBlack font-normal px-[14px] bg-white mb-12 mt-[13px]"
+        class="text-center font-roboto text-xs text-darkBlack font-normal px-[14px] bg-white md:mb-12 mb-7 mt-[13px]"
       >
         Forgot Your Password?
       </p>
       <p class="text-center font-roboto text-xs font-normal px-[14px] bg-white">
         <span class="text-darkBlack">Don't Have An Account?</span>
-        <a class="!text-purpleBlue" href="/">Sign Up</a>
+        <NuxtLink class="!text-purpleBlue" to="/">Sign Up</NuxtLink>
       </p>
     </div>
   </div>
