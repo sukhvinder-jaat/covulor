@@ -11,9 +11,24 @@
 </template>
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts';
-import { dashboardLineChartList } from "../../utils/helper";
 
-const chartData = dashboardLineChartList[0] || {};
+interface ChartData {
+  series: { name: string; data: number[] }[];
+  categories: string[];
+  optionsData?: { min?: number; max?: number };
+}
+
+
+const props = defineProps({
+  LineChartList: {
+    type: Array,
+    default: () => []
+  },
+  isLegendVisible: Boolean
+})
+
+console.log(props.isLegendVisible, "Linenknkn")
+const chartData: ChartData = (props.LineChartList[0] || {}) as ChartData;
 const chartOptions = {
   chart: {
     height: 350,
@@ -74,6 +89,7 @@ const chartOptions = {
         "</strong>"
       );
     },
+    show: props.isLegendVisible,
   },
   tooltip: {
     marker: {
@@ -105,5 +121,3 @@ const chartOptions = {
 };
 const series: any[] = chartData.series || [];
 </script>
-
-  
