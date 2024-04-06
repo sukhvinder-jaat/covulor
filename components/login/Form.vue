@@ -48,6 +48,7 @@ const login = async () => {
   // Validate email
   if (!email.value || !validateEmail(email.value)) {
     emailError.value = true;
+    return
   }
 
   // Validate password
