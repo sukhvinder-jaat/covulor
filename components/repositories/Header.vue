@@ -6,20 +6,20 @@
                 <p class=" font-roboto font-bold text-xl sm:text-3xl sm:leading-[48px]">Repositories</p>
             </div>
             <div class=" flex  gap-2 w-full justify-end sm:pr-4">
-                <p class=" font-roboto text-base sm:text-xl sm:leading-[30px] font-normal text-darkSlateGray mt-[-3px]">Manage
+                <p class=" font-roboto text-base sm:text-xl sm:leading-[30px] font-normal text-darkSlateGray mt-[-3px]">
+                    Manage
                     Repositories</p>
-                <div class=" relative">
+                <div class="relative">
                     <UPopover class="table_popup">
                         <div label="Open"
                             class="flex items-center gap-x-2  max-h-[25px] h-full max-w-[119px] rounded-[10px]  w-full">
                             <IconsPopupPlus />
                         </div>
-
                         <template #panel="{ close }">
                             <div class="relative">
                                 <div class="absolute cursor-pointer z-10 top-[-3px] left-[-15px]" label="Close"
                                     @click="close">
-                                <IconsPopupCross/>
+                                    <IconsPopupCross />
                                 </div>
                                 <div
                                     class=" bg-white pt-[10px] ps-1 pr-[10px] pb-[10px]  min-w-[154px] rounded-md absolute left-[-154px] top-2">

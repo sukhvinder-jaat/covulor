@@ -48,7 +48,6 @@
 
 <script setup lang="ts">
 const routes = useRoute();
-console.log(routes.fullPath, "route");
 import {
   FINDINGS,
   READY_TO_REMEDIATE,

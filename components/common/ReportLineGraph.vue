@@ -29,8 +29,6 @@ const props = defineProps({
 const chartData: ChartData = (props.LineChartList[0] || {}) as ChartData;
 
 const formattedDates: string[] = formatDates(chartData.dates);
-console.log(formattedDates);
-
 
 const chartOptions = {
   chart: {
