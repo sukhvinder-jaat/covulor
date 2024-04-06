@@ -37,7 +37,7 @@
       <CommonTable />
     </div>
   </div>
-  <CommonTable :rows="heading" :columns="data" />
+  <!-- <CommonTable :rows="heading" :columns="data" /> -->
 </template>
 
 <script setup lang="ts">

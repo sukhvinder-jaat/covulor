@@ -66,6 +66,10 @@ module.exports = {
       },
       dropShadow: {
         "login-form": "0px 20px 24px 0px #8D8D8D29",
+        mediumPurple: "#C08FFF",
+        thistle: "#C6C2DE",
+        ghostWhiteLight: "#F2F0F9",
+        lightToBlack:"#25213B",
       },
     },
   },
