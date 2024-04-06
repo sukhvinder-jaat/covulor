@@ -11,6 +11,7 @@ const country = ref(props.options ? props.options[0] : null);
 
 <template>
     <div class=" w-full">
-        <USelect :options="options" />
+        <USelect  class="text-[#6E6893]" icon="i-material-symbols-light-arrow-drop-down-rounded"
+            :options="options" />
     </div>
 </template>

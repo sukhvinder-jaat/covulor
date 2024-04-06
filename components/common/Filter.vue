@@ -4,7 +4,7 @@
             <UButton color="white" icon="i-heroicons-funnel-16-solid" label="Filter" class="min-h-[39px]" />
             <template #panel>
                 <div
-                    class="min-h-[322px] w-full sm:w-[504px] ps-5 pr-4 pt-4 pb-2 border border-thistle rounded-md shadow-[0px_5px_8px_0px_#00000033] relative">
+                    class="min-h-[322px] w-full sm:w-[504px] ps-5 pr-4 pt-4 pb-5 border border-thistle rounded-md shadow-[0px_5px_8px_0px_#00000033] relative">
                     <p
                         class=" font-roboto font-bold text-xs leading-[14px] uppercase text-purple !tracking-[5%] w-full left-1 top-9">
                         SEARCH
@@ -63,6 +63,11 @@
                                 </div>
                             </div>
                         </form>
+                        <p class=" font-inter font-medium text-sm leading-4 tracking-[5%] mt-4">+ Add</p>
+                        <div class=" relative">
+                            <span class=" h-[1px] absolute w-full bg-ghostWhiteLight top-[-11px]"></span>
+                            <p class=" font-bold text-sm text-purple leading-4 mt-7">Clear filters</p>
+                        </div>
                     </div>
                 </div>
             </template>

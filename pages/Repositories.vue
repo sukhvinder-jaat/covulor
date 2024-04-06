@@ -9,11 +9,11 @@
                 <p class=" font-roboto text-base sm:text-xl sm:leading-[30px] font-normal text-darkSlateGray">Manage
                     Repositories</p>
                 <div class="">
-                    <UPopover class="relative z-10 !overflow-auto">
-                        <UButton trailing-icon="i-heroicons-plus-circle-16-solid" class=" overflow_initial" />
+                    <UPopover class="relative z-10">
+                        <UButton icon="i-heroicons-plus-small-20-solid" class=" text-white rounded-[50%] w-[26px] h-[26px] flex items-center justify-center" />
                         <template #panel="{ close }" class=" overflow-visible">
                             <div class=" p-8">
-                                <div class=" ">
+                                <div>
                                     <UButton
                                         class="p-0 rounded-[50%] shadow-cross-popp absolute overflow-visible top-[-20px] right-0 z-[100]"
                                         @click="close" icon="i-heroicons-x-circle-solid" />
