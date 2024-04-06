@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[35px]">
+  <div class="my-[35px]">
     <CommonTable :header="heading">
       <tr
         v-for="repo in repos"
