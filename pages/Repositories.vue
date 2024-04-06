@@ -1,4 +1,4 @@
-<template class=" overflow-hidden" >
+<template class=" overflow-hidden">
     <div class="lg:pl-[54px] lg:pr-[63px] md:px-10 px-3 sm:px-5 pt-[36px] w-full ">
         <div class=" flex justify-between items-center relative">
             <div class=" flex items-center gap-1 sm:gap-[10px]">
@@ -22,10 +22,10 @@
 
                         </div>
 
-                        <template #panel="{ close }" >
+                        <template #panel="{ close }">
                             <div class="relative">
-                                <svg class="absolute  cursor-pointer z-10 top-[-3px] left-[-9px]" label="Close" @click="close"
-                                    width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                <svg class="absolute  cursor-pointer z-10 top-[-3px] left-[-9px]" label="Close"
+                                    @click="close" width="22" height="24" viewBox="0 0 22 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_6031_1531)">
                                         <circle cx="12" cy="12" r="10" fill="white" />
@@ -51,7 +51,8 @@
                                     </defs>
                                 </svg>
 
-                                <div class=" bg-white p-[14px] ps-7 min-w-[154px] rounded-md absolute left-[-154px] top-2">
+                                <div
+                                    class=" bg-white p-[14px] ps-7 min-w-[154px] rounded-md absolute left-[-154px] top-2">
                                     <ul class=" flex flex-col gap-y-2 items-start justify-star list-none">
                                         <li class="font-roboto text-black font-medium text-sm"
                                             v-for="(tagOption, i) in tagsOption" :key="i">
@@ -80,12 +81,13 @@
                     class="font-inter font-semibold text-[13px] text-white bg-purple py-2 px-3 sm:px-[17px] sm:py-[10px] rounded-md border border-purple hover:bg-white hover:text-purple transition-all ease-in-out duration-300 leading-[15px]">Download</button>
                 <button
                     class="font-inter font-semibold text-[13px] text-purple uppercase flex items-center gap-2">REFRESCH
-                    <span class=" hidden sm:block">
+                    <span class="hidden sm:block">
                         <img src="/assets/Icons/refresch.svg" alt="refresch">
                     </span>
                 </button>
             </div>
         </div>
+        <RepositoriesTable />
     </div>
 </template>
 <script setup lang="ts">
@@ -97,8 +99,7 @@ definePageMeta({
 const tagsOption = ["Github", "Bitbucket", "GitLab"]
 </script>
 <style setup>
-#headlessui-popover-panel-ndcv2Y3vSTA_23{
-overflow: visible !important;
+#headlessui-popover-panel-ndcv2Y3vSTA_23 {
+    overflow: visible !important;
 }
-
 </style>
