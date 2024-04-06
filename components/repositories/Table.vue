@@ -4,7 +4,7 @@
       <tr
         v-for="repo in repos"
         :key="repo.id"
-        class="hover:bg-white bg-[#F5F7FB] transition-all ease-in-out duration-150"
+        class="hover:bg-white bg-[#F5F7FB] transition-all ease-in-out duration-150 border border-[#D4D7DD]"
       >
         <td class="px-5 py-4 whitespace-nowrap pointer-events-none">
           <p></p>
@@ -100,19 +100,7 @@
             class="text-lightToBlack font-roboto font-medium text-xs py-[2px] px-2 bg-hawkasBlue group transition-all ease-in-out duration-300 hover:bg-[#8220FF] rounded-xl flex items-center gap-x-1 justify-center hover:text-white"
             :to="repo.path"
             >View
-            <svg
-              width="9"
-              height="8"
-              viewBox="0 0 9 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.50132 0.273563L4.16392 7.79577L2.92676 4.37608L0 2.19983L8.50132 0.273563Z"
-                fill="#8220FF"
-                class="transition-all ease-in-out duration-300 group-hover:fill-white"
-              />
-            </svg>
+            <IconsViewArrow />
           </NuxtLink>
         </td>
       </tr>
