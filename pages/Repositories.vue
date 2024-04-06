@@ -15,7 +15,7 @@
           Download
         </UButton>
         <UButton
-          class="font-inter font-semibold text-[13px] !text-purple !bg-transparent uppercase hover:!bg-transparent flex items-center gap-2 !p-0 !border-0"
+          class="font-inter font-semibold text-[13px] !text-purple !bg-transparent uppercase !shadow-none hover:!bg-transparent flex items-center gap-2 !p-0 !border-0"
         >
           REFRESCH
           <span class="hidden sm:block">
