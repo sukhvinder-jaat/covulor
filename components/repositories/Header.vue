@@ -45,9 +45,9 @@
                                     </defs>
                                 </svg>
 
-                                <div class=" bg-white p-[10px]  min-w-[154px] rounded-md absolute left-[-154px] top-2">
+                                <div class=" bg-white pt-[10px] ps-1 pr-[10px] pb-[10px]  min-w-[154px] rounded-md absolute left-[-154px] top-2">
                                     <ul class=" flex flex-col  items-start justify-star list-none">
-                                        <li class="font-roboto text-black font-medium w-full px-2 py-[5px] text-sm hover:bg-[#F2F0F9] rounded transition-all duration-200 ease-in-out"
+                                        <li class="font-roboto text-black font-normal w-full px-2 py-[5px] text-sm hover:bg-[#F2F0F9] rounded transition-all duration-200 ease-in-out"
                                             v-for="(tagOption, i) in tagsOption" :key="i">
                                             {{ tagOption }}
                                         </li>

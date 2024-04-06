@@ -8,7 +8,7 @@
                     <CommonSearch />
                 </div>
             </div>
-            <div class=" flex items-center gap-2 sm:gap-5">
+            <div class=" flex items-center gap-2 sm:gap-5 pr-1">
                 <button
                     class="font-inter font-semibold text-[13px] text-white bg-purple py-2 px-3 sm:px-[17px] sm:py-[10px] rounded-md border border-purple hover:bg-white hover:text-purple transition-all ease-in-out duration-300 leading-[15px]">Download</button>
                 <button
