@@ -438,3 +438,46 @@ export const findingSupplyChainChart = [
     title: "Cloud Security Posture Management (CSPM)",
   },
 ];
+
+export const findingDetailSourceThreats = [
+  {
+    title: "Submit  unauthorized change",
+    type: "green",
+  },
+  {
+    title: "Compromise  source repo",
+    type: "red",
+  },
+  {
+    title: "Build from  modified source",
+    type: "green",
+  },
+];
+
+//finding detail Build Threats cards
+export const findingDetailbuildThreats = [
+  {
+    title: "Compromise build process",
+    type: "green",
+  },
+  {
+    title: "Upload modified package",
+    type: "green",
+  },
+  {
+    title: "Compromise package registry",
+    type: "red",
+  },
+  {
+    title: "Use compromised package",
+    type: "red",
+  },
+];
+
+// Dependencies Threats cards
+export const findingDetailDependenciesThreats = [
+  {
+    title: "Use compromised package",
+    type: "red",
+  },
+];

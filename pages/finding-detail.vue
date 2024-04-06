@@ -7,6 +7,7 @@
     />
     <FindingDetailAppPlugin />
     <FindingDetailDataImporter />
+    <FindingDetailSlsa />
     <FindingDetailSoftwareChain />
   </div>
 </template>
