@@ -368,3 +368,28 @@ export const contextData: ContextData = {
     },
   ],
 };
+export const commonFindingDetails = [
+  {
+    title: "Command Injection - lastrss.php: 71",
+    tagfirst: { text: "Code_weakness", bgColor: "bg-lawnGreen" },
+    tagsecond: { text: "Done", bgColor: "bg-lightBlue" },
+    hideText: "",
+    remediationTitle: "AI Remedation",
+    remediationDescription:
+      "I wrapped the content of the file with base64 encoding/decoding to prevent injection through unserialize. This operation will ensure that, even if an attacker somehow manages to inject malicious code into the cache file, it will not be executed when the cache file is read back into the program. Instead, any injected code will merely be treated as base64 encoded string, not executable code.",
+    buttonText: "Create AI Remedation",
+    remediationDetails: "LLM Generated Remediations",
+  },
+  {
+    title: "Plexicus/-OWASPWebGoatPHP",
+    tagfirst: { text: "Active", bgColor: "bg-lightGreen" },
+    tagsecond: { text: "Git Repository", bgColor: "bg-purple" },
+    hideText: "!hidden",
+    remediationTitle: "Observations",
+    remediationDescription:
+      "The repository is primarily created for educational purposes aimed at learning web application security. The project uses PHP as its main language and does not deal with any confidential data as per the available structure. However, files like .gitignore, .htaccess, Vagrantfile, webgoat.sql etc. require special attention from a security standpoint. The application, however, being deliberately vulnerable poses potential risks, and it's necessary for the users to be aware of insecurities and potential harm they could bring in a production environment.",
+    buttonText: "Link",
+    remediationDetails:
+      "A deliberately vulnerable web application for learning web application security.",
+  },
+];

@@ -1,6 +1,6 @@
 <template>
     <!-- Header section  -->
-    <div class="bg-white px-3 py-6 lg:p-6 rounded-lg mt-2">
+    <div class="bg-white px-3 py-6 lg:p-6 rounded-lg my-[49px]">
         <div class="flex items-center flex-wrap justify-between">
             <!-- Custom chart heading component -->
             <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Total Findings" />
