@@ -1,6 +1,6 @@
 <template>
     <!-- Header section  -->
-    <div class="bg-white px-3 py-6 lg:p-6 rounded-lg mt-2">
+    <div class="bg-white px-3 py-6 lg:p-6 rounded-lg my-[49px]">
         <div class="flex items-center flex-wrap justify-between">
             <!-- Custom chart heading component -->
             <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Total Findings" />
@@ -76,8 +76,8 @@ const chartOptions = {
     }
 };
 const series = [{
-    name: 'Plexilus /',
-    data: [100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 130]
+    name: '  Plexilus /',
+    data: [100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 130],
 }]
 </script>
 <style>
@@ -104,7 +104,7 @@ const series = [{
     background: #8220FF !important;
     border-radius: 8px !important;
     border: 0 !important;
-    transform: translate(-53px, -16px) !important;
+    transform: translate(-35px, -20px) !important;
     color: #fff !important;
 }
 

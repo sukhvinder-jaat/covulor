@@ -290,7 +290,6 @@ export const findingPieChartData = {
   value: "6.4587",
 };
 
-
 // FINDINGS REPORT LINE CHART  DATA
 export const findingsLineChartList = [
   {
@@ -319,5 +318,78 @@ export const findingsLineChartList = [
       min: 0,
       max: 10000,
     },
+  },
+];
+export interface ContextData {
+  headers: string[];
+  data: {
+    id: number;
+    sourceControl: string;
+    repo: string;
+    priority: number;
+    tags: string;
+    branch: string;
+  }[];
+}
+
+export const contextData: ContextData = {
+  headers: [
+    "REPOSITORY ID",
+    "SOURCE CONTROL",
+    "REPO",
+    "PRIORITY",
+    "TAGS",
+    "BRANCH",
+  ],
+  data: [
+    {
+      id: 56,
+      sourceControl: "Github",
+      repo: "iPlexicus/-OWASPWebGoatPHP",
+      priority: 75,
+      tags: "Financial",
+      branch: "Master",
+    },
+    {
+      id: 54,
+      sourceControl: "Github",
+      repo: "plexicus/AltoroJ",
+      priority: 30,
+      tags: "Insurance",
+      branch: "Master",
+    },
+    {
+      id: 51,
+      sourceControl: "Github",
+      repo: "plexicus/-simple-vulnerable",
+      priority: 95,
+      tags: "Energy",
+      branch: "Main",
+    },
+  ],
+};
+export const commonFindingDetails = [
+  {
+    title: "Command Injection - lastrss.php: 71",
+    tagfirst: { text: "Code_weakness", bgColor: "bg-lawnGreen" },
+    tagsecond: { text: "Done", bgColor: "bg-lightBlue" },
+    hideText: "",
+    remediationTitle: "AI Remedation",
+    remediationDescription:
+      "I wrapped the content of the file with base64 encoding/decoding to prevent injection through unserialize. This operation will ensure that, even if an attacker somehow manages to inject malicious code into the cache file, it will not be executed when the cache file is read back into the program. Instead, any injected code will merely be treated as base64 encoded string, not executable code.",
+    buttonText: "Create AI Remedation",
+    remediationDetails: "LLM Generated Remediations",
+  },
+  {
+    title: "Plexicus/-OWASPWebGoatPHP",
+    tagfirst: { text: "Active", bgColor: "bg-lightGreen" },
+    tagsecond: { text: "Git Repository", bgColor: "bg-purple" },
+    hideText: "!hidden",
+    remediationTitle: "Observations",
+    remediationDescription:
+      "The repository is primarily created for educational purposes aimed at learning web application security. The project uses PHP as its main language and does not deal with any confidential data as per the available structure. However, files like .gitignore, .htaccess, Vagrantfile, webgoat.sql etc. require special attention from a security standpoint. The application, however, being deliberately vulnerable poses potential risks, and it's necessary for the users to be aware of insecurities and potential harm they could bring in a production environment.",
+    buttonText: "Link",
+    remediationDetails:
+      "A deliberately vulnerable web application for learning web application security.",
   },
 ];
