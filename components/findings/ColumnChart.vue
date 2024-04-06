@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="overflow-auto">
-            <div class="sm:w-auto overflow-auto w-[700px]">
+            <div class="sm:w-auto overflow-auto w-[700px] column_chart">
                 <ClientOnly>
                     <VueApexCharts type="bar" :height="height" :options="chartOptions" :series="series"></VueApexCharts>
                 </ClientOnly>
@@ -76,7 +76,7 @@ const chartOptions = {
     }
 };
 const series = [{
-    data: ['plexilus', 55, 41, 67, 22, 43, 21, 33, 25, 31, 17, 65, 35, 44, 55, 41, 17, 22, 43, 21, 33, 25, 31, 57, 65]
+    data: [40, 55, 41, 67, 22, 43, 21, 33, 25, 31, 17, 65, 35, 44, 55, 41, 17, 22, 43, 21, 33, 25, 31, 57, 65]
 }]
 </script>
 <style>
@@ -100,16 +100,16 @@ const series = [{
     border-radius: 50%;
 }
 
-.apexcharts-tooltip {
+.column_chart .apexcharts-tooltip {
     background: #8220FF !important;
     border-radius: 8px !important;
     border: 0 !important;
     transform: translate(-53px, -16px) !important;
-    /* color: #fff !important; */
+    color: #fff !important;
 }
 
 .apexcharts-toolbar,
-.apexcharts-tooltip-title {
+.column_chart .apexcharts-tooltip-title,.column_chart .apexcharts-tooltip-marker {
     display: none !important;
 }
 </style>
