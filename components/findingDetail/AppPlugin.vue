@@ -8,7 +8,7 @@
       App/plugin/lastrss.php: 71
     </h2>
     <p
-      class="font-roboto font-normal lg:text-[25px] sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
+      class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
     >
       Scan Report
     </p>
@@ -34,7 +34,6 @@
         usually have, leading to malicious activities such as data leakage,
         unauthorized access or system takeover.
       </p>
-      <p class="font-bold font-roboto text-xl pt-2 text-purple">More Details</p>
     </div>
     <div class="sm:max-w-[435px] py-7 lg:pe-7 px-5 lg:ps-[46px] bg-[#F4F4F4]">
       <p>

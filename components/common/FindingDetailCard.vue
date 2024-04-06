@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-between sm:items-center gap-y-5 sm:flex-row flex-col">
+  <div
+    class="flex justify-between sm:items-center gap-y-5 sm:flex-row flex-col"
+  >
     <div class="ps-2.5">
       <h2
         class="font-roboto font-bold text-xl sm:text-2xl xl:text-3xl text-midnightBlue tracking-[-.62px] pb-[14px]"
@@ -9,30 +11,37 @@
       <span
         :class="
           tagfirst.bgColor +
-          ' me-[14px] text-center w-[121px] py-1.5 rounded-full text-white font-roboto font-normal text-[13px] inline-block'
+          ' me-[14px] text-center w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block'
         "
         >{{ tagfirst.text }}</span
       >
       <span
         :class="
           tagsecond.bgColor +
-          ' me-[14px] text-center w-[121px] py-1.5 rounded-full text-white font-roboto font-normal text-[13px] inline-block'
+          ' me-[14px] text-center w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block'
         "
         >{{ tagsecond.text }}</span
       >
     </div>
     <div :class="hideText + ' flex items-center gap-1 ps-2.5 sm:ps-0'">
       <p
-        class="font-roboto font-normal lg:text-[25px] sm:text-lg text-base text-midnightBlue tracking-[-2%]"
+        class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%]"
       >
         Prioritization Value:
       </p>
-      <span class="text-comet font-roboto font-bold lg:text-[25px] sm:text-lg text-base">0/100</span>
+      <span
+        class="text-comet font-roboto font-bold lg:text-[25px] sm:text-lg text-base"
+        >0/100</span
+      >
     </div>
   </div>
-  <div class="px-10 py-10 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11">
+  <div
+    class="px-10 py-10 bg-white flex justify-between md:flex-row flex-col mt-[22px] w-full mb-11"
+  >
     <div class="md:w-1/2 md:max-w-[467px] xl:ms-1">
-      <h2 class="font-roboto text-midnightBlue font-bold text-[28px] !tracking-[-2%] pb-[15px]">
+      <h2
+        class="font-roboto text-midnightBlue font-bold text-[28px] !tracking-[-2%] pb-[15px]"
+      >
         {{ remediationTitle }}
       </h2>
       <p
@@ -40,7 +49,9 @@
       >
         {{ remediationDescription }}
       </p>
-      <p class="font-bold font-roboto text-xl pt-2 text-purple">More Details</p>
+      <p :class="link.textColor + ' font-bold font-roboto text-xl pt-2'">
+        {{ link.title }}
+      </p>
     </div>
     <div class="sm:w-[250px] md:pt-0 pt-5">
       <UButton color="primary" size="xs" block variant="solid">
@@ -48,7 +59,9 @@
           buttonText
         }}</span>
       </UButton>
-      <p class="text-center pt-2.5 tracking-[-.28px] font-roboto font-normal text-purple text-sm">
+      <p
+        class="text-center pt-2.5 tracking-[-.28px] font-roboto font-normal text-purple text-sm"
+      >
         {{ remediationDetails }}
       </p>
     </div>
@@ -86,6 +99,10 @@ export default defineComponent({
     },
     remediationDescription: {
       type: String as () => string,
+      required: true,
+    },
+    link: {
+      type: Object as () => { title: string; textColor: string },
       required: true,
     },
     remediationDetails: {
