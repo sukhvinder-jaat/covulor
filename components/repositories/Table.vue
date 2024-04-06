@@ -50,7 +50,10 @@
         </td>
         <td class="px-5 py-4 whitespace-nowrap">
           <!-- popup -->
-          <UPopover class="table_popup">
+          <UPopover
+            :popper="{ placement: 'bottom-end', offsetDistance: 20 }"
+            class="table_popup"
+          >
             <div
               label="Open"
               class="bg-[#F3D8A6] flex gap-x-2 pe-2 max-h-[25px] h-full max-w-[119px] rounded-[10px] items-center w-full"
