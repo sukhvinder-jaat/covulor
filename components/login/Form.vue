@@ -134,4 +134,7 @@ const passwordFieldType = computed(() =>
 .radio_input div{
   align-items: center !important;
 }
+.radio_input .form-radio:checked{
+ background-color: #8220FF !important; 
+}
 </style>
