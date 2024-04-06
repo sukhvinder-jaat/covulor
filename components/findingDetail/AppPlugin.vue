@@ -8,7 +8,7 @@
       App/plugin/lastrss.php: 71
     </h2>
     <p
-      class="font-roboto font-normal lg:text-[25px] sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
+      class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
     >
       Scan Report
     </p>

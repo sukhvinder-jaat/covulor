@@ -8,7 +8,7 @@
       Data from importer
     </h2>
     <p
-      class="font-roboto font-normal lg:text-[25px] sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
+      class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%] md:ps-0 ps-2.5"
     >
       Date: 2024-03-06T0 4:08:00.000Z
     </p>
@@ -36,23 +36,24 @@
       </p>
     </div>
     <div class="sm:max-w-[435px] xl:me-10 md:ms-5">
-      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
-        Title:
-        <span class="font-normal">Command Injection - lastrss.php: 71</span>
-      </p>
-      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
-        CWE:<span class="font-normal">["CWE-77","CWE-78"] </span>
-      </p>
-      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
-        Impact Original line: <span class="font-normal"> 71</span>
-      </p>
-      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
-        File path: <span class="font-normal">app/plugin/lastrss.php</span>
-      </p>
-      <p class="font-roboto font-bold xl:text-xl text-lg  text-midnightBlue">
-        Type: <span class="font-normal">code_weakness</span>
+      <p
+        v-for="(item, index) in dataImpoterList"
+        :key="index"
+        class="font-roboto font-bold xl:text-xl text-lg text-midnightBlue"
+      >
+        {{ item.title }} <span class="font-normal">{{ item.content }}</span>
       </p>
     </div>
   </div>
 </template>
-<script lang="ts"></script>
+<script setup lang="ts">
+import { defineComponent } from "vue";
+
+interface DataImpoterList {
+  title: string;
+  content: string;
+}
+
+
+</script>
+

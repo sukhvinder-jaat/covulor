@@ -25,7 +25,7 @@
     </div>
     <div :class="hideText + ' flex items-center gap-1 ps-2.5 sm:ps-0'">
       <p
-        class="font-roboto font-normal lg:text-[25px] sm:text-lg text-base text-midnightBlue tracking-[-2%]"
+        class="font-roboto font-normal xl:text-[25px] lg:text-xl sm:text-lg text-base text-midnightBlue tracking-[-2%]"
       >
         Prioritization Value:
       </p>

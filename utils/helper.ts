@@ -389,9 +389,20 @@ export const commonFindingDetails = [
     remediationTitle: "Observations",
     remediationDescription:
       "The repository is primarily created for educational purposes aimed at learning web application security. The project uses PHP as its main language and does not deal with any confidential data as per the available structure. However, files like .gitignore, .htaccess, Vagrantfile, webgoat.sql etc. require special attention from a security standpoint. The application, however, being deliberately vulnerable poses potential risks, and it's necessary for the users to be aware of insecurities and potential harm they could bring in a production environment.",
-    link: { title: "No Confidential Data Treated", textColor: "text-lightGreen" },
+    link: {
+      title: "No Confidential Data Treated",
+      textColor: "text-lightGreen",
+    },
     buttonText: "Link",
     remediationDetails:
       "A deliberately vulnerable web application for learning web application security.",
   },
+];
+
+export const dataImpoterList = [
+  { title: "Title:", content: "Command Injection - lastrss.php: 71" },
+  { title: "CWE:", content: '["CWE-77","CWE-78"]' },
+  { title: "Impact Original line:", content: "71" },
+  { title: "File path:", content: "app/plugin/lastrss.php" },
+  { title: "Type:", content: "code_weakness" },
 ];
