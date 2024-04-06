@@ -64,7 +64,7 @@ const login = async () => {
   }
 
   // Fetch API
-  await fetchRequestHandler(post, `/login`, { data });
+  await fetchRequestHandler(post, LOGIN, { data });
 };
 
 // Function to toggle password visibility
