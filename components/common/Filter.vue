@@ -26,8 +26,8 @@
                                 </div>
                                 <div class="flex gap-5 items-center w-full mt-3 sm:mt-0">
                                     <div class=" flex items-center gap-[21px] w-full">
-                                        <CommonSelect :options="countries" />
-                                        <CommonSelect :options="countries" />
+                                        <CommonSelect :options="repositoryID" />
+                                        <CommonSelect :options="repositoryID" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
                                         class=" text-black opacity-50 w-[15px] h-[14px]  cursor-pointer" />
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="flex gap-5 items-center w-full mt-3 sm:mt-0">
                                     <div class="sm:max-w-[279px] w-full">
-                                        <CommonSelect :options="countries" />
+                                        <CommonSelect :options="sourceControl" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
                                         class=" text-black opacity-50 w-[15px] h-[14px] cursor-pointer" />
@@ -75,6 +75,8 @@
     </div>
 </template>
 <script setup lang="ts">
+const repositoryID = ['1', '2', '3']
+const sourceControl = ['plexicus/AltoroJ', 'plexicus/AltoroJ', 'plexicus/AltoroJ']
 const countries = ['United States', 'Canada', 'Mexico']
 </script>
 <style>
