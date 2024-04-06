@@ -1,10 +1,10 @@
-<template>
+<template class="overflow-hidden">
   <div
     class="lg:pl-[54px] lg:pr-[63px] md:px-10 px-5 pt-[36px] w-full relative"
   >
-    <span
+    <!-- <span
       class="w-full bg-black opacity-10 h-[1px] block absolute max-w-[1073px] top-[100px]"
-    ></span>
+    ></span> -->
 
     <div class="">
       <div class="flex items-center gap-[10px]">
@@ -17,9 +17,15 @@
     <div class="mt-16">
       <CommonFilter />
     </div>
-    <CommonTable />
+    <div class="mt-16">
+      <RepositoriesTable />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 const countries = ["United States", "Canada", "Mexico"];
+// Page Meta
+definePageMeta({
+  layout: "home",
+});
 </script>

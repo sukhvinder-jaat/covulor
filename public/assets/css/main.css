@@ -17,7 +17,10 @@ body {
 }
 
 /* Styling for funnel graph labels */
-.svg-funnel-js .svg-funnel-js__labels .svg-funnel-js__label:hover .label__segment-percentages {
+.svg-funnel-js
+  .svg-funnel-js__labels
+  .svg-funnel-js__label:hover
+  .label__segment-percentages {
   opacity: 0;
 }
 
@@ -33,7 +36,8 @@ body {
   width: 100%;
 }
 
-.svg-funnel-js:not(.svg-funnel-js--vertical) .svg-funnel-js__label:not(:first-child) {
+.svg-funnel-js:not(.svg-funnel-js--vertical)
+  .svg-funnel-js__label:not(:first-child) {
   border-left: 1px solid #ededed;
 }
 
@@ -71,9 +75,12 @@ body {
   /* Adjust x-axis opacity */
   opacity: 70%;
 }
-
+/* table popup */
+.table_popup .ring-1 {
+  overflow: visible !important;
+  border-width: 0px !important;
+}
 @media (max-width: 1280px) {
-
   /* Responsive styles for smaller screens */
   .report_chart .apexcharts-legend.apx-legend-position-bottom {
     top: auto !important;

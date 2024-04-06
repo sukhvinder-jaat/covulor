@@ -18,7 +18,7 @@ interface DropdownItem {
 export const dropdownSidebarList: DropdownItem[] = [
   {
     title: "Dashboards",
-    href: "/dashboards",
+    href: "/",
     content: [
       { subLink: "Reports", link: "#report" },
       { subLink: "SLSA", link: "#slsa" },
@@ -207,6 +207,24 @@ export const chartProgressBar = [
   },
 ];
 
+// Chart progress bar data
+export const dashboardChartProgressBar = [
+  {
+    title: "Findings Without action plan",
+    rank: 26,
+    rankPercentage: (26 * 100) / 31,
+  },
+  {
+    title: "Findings With action plan",
+    rank: 5,
+    rankPercentage: 100 - 83.87,
+  },
+  {
+    title: "Total Findings",
+    rank: 31,
+    rankPercentage: 0,
+  },
+];
 // FINDINGS REPORT LINE CHART  DATA
 export const dashboardLineChartList = [
   {

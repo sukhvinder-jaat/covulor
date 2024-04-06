@@ -34,7 +34,6 @@
       >
         <DashboardCircularChart />
       </div>
-      <CommonTable />
     </div>
   </div>
   <!-- <CommonTable :rows="heading" :columns="data" /> -->
