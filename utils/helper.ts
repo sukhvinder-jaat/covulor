@@ -290,7 +290,6 @@ export const findingPieChartData = {
   value: "6.4587",
 };
 
-
 // FINDINGS REPORT LINE CHART  DATA
 export const findingsLineChartList = [
   {
@@ -321,3 +320,51 @@ export const findingsLineChartList = [
     },
   },
 ];
+export interface ContextData {
+  headers: string[];
+  data: {
+    id: number;
+    sourceControl: string;
+    repo: string;
+    priority: number;
+    tags: string;
+    branch: string;
+  }[];
+}
+
+export const contextData: ContextData = {
+  headers: [
+    "REPOSITORY ID",
+    "SOURCE CONTROL",
+    "REPO",
+    "PRIORITY",
+    "TAGS",
+    "BRANCH",
+  ],
+  data: [
+    {
+      id: 56,
+      sourceControl: "Github",
+      repo: "iPlexicus/-OWASPWebGoatPHP",
+      priority: 75,
+      tags: "Financial",
+      branch: "Master",
+    },
+    {
+      id: 54,
+      sourceControl: "Github",
+      repo: "plexicus/AltoroJ",
+      priority: 30,
+      tags: "Insurance",
+      branch: "Master",
+    },
+    {
+      id: 51,
+      sourceControl: "Github",
+      repo: "plexicus/-simple-vulnerable",
+      priority: 95,
+      tags: "Energy",
+      branch: "Main",
+    },
+  ],
+};
