@@ -10,12 +10,14 @@
               v-for="(heading, index) in header"
               :key="index"
               scope="col"
-              class="py-4 px-5 uppercase tracking-[5%] bg-hawkasBlue text-center font-roboto font-semibold text-xs text-midnightBlue"
+              class="py-4 px-5 uppercase tracking-[5%] bg-hawkasBlue text-center font-roboto font-semibold text-xs text-midnightBlue text-nowrap"
             >
-              <span :class="index === 0 ? 'block' : 'hidden'"
-                ><IconsTableUpDown />
-              </span>
-              {{ heading }}
+              <div class="flex justify-center items-center">
+                <span :class="index === 0 ? 'block me-1' : 'hidden'"
+                  ><IconsTableUpDown />
+                </span>
+                {{ heading }}
+              </div>
             </th>
           </tr>
         </thead>
