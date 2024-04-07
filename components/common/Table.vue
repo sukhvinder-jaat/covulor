@@ -3,7 +3,7 @@
     <div
       class="w-full overflow-x-auto min-[1160px]:max-w-[833px] lg:max-w-[700px] min-[1250px]:max-w-[1000px] pb-2"
     >
-      <table class="bg-[#F5F7FB] min-w-[903px] w-full">
+      <table class="bg-[#F5F7FB] w-full">
         <thead class="ps-5">
           <tr class="bg-hawkasBlue border border-[#D4D7DD]">
             <th
