@@ -1,5 +1,5 @@
 <template>
-    <div class=" ">
+    <div class="filter_icon ">
         <UPopover :popper="{ placement: 'bottom-start' }">
             <UButton color="white" icon="i-heroicons-funnel-16-solid" label="Filter" class="min-h-[39px]" />
             <template #panel>
@@ -26,11 +26,11 @@
                                 </div>
                                 <div class="flex gap-5 items-center w-full mt-3 sm:mt-0">
                                     <div class=" flex items-center gap-[21px] w-full">
-                                        <CommonSelect :options="countries" />
-                                        <CommonSelect :options="countries" />
+                                        <CommonSelect :options="repositoryID" />
+                                        <CommonSelect :options="repositoryID" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
+                                        class=" text-black opacity-50 w-[15px] h-[14px]  cursor-pointer" />
                                 </div>
                             </div>
                             <div class=" mt-4 sm:flex gap-6 items-center justify-between">
@@ -42,10 +42,10 @@
                                 </div>
                                 <div class="flex gap-5 items-center w-full mt-3 sm:mt-0">
                                     <div class="sm:max-w-[279px] w-full">
-                                        <CommonSelect :options="countries" />
+                                        <CommonSelect :options="sourceControl" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
+                                        class=" text-black opacity-50 w-[15px] h-[14px] cursor-pointer" />
                                 </div>
                             </div>
                             <div class=" mt-4 sm:flex gap-6 items-center justify-between">
@@ -59,7 +59,7 @@
                                         <CommonSelect :options="countries" />
                                     </div>
                                     <Icon name="i-heroicons-x-mark-16-solid"
-                                        class=" text-black opacity-50 w-[15px] h-[14px]" />
+                                        class=" text-black opacity-50 w-[15px] h-[14px] cursor-pointer" />
                                 </div>
                             </div>
                         </form>
@@ -75,6 +75,12 @@
     </div>
 </template>
 <script setup lang="ts">
+const repositoryID = ['1', '2', '3']
+const sourceControl = ['plexicus/AltoroJ', 'plexicus/AltoroJ', 'plexicus/AltoroJ']
 const countries = ['United States', 'Canada', 'Mexico']
-
 </script>
+<style>
+.filter_icon .i-heroicons-funnel-16-solid {
+    color: #8220FF;
+}
+</style>

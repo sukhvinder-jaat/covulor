@@ -7,13 +7,14 @@
       <div v-for="(item, index) in dropdownSidebarList" :key="index">
         <!-- Dropdown item button -->
         <NuxtLink @click="toggleDropdownHandler(index)" :class="indexValue === index || route.fullPath.includes(item.title.toLowerCase())
-            ? 'bg-[rgba(96,_91,_255,_0.15)] text-purple'
-            : 'text-dimGray'
+          ? 'bg-[rgba(96,_91,_255,_0.15)] text-purple'
+          : 'text-dimGray'
           " :to="item.href" class="flex w-full justify-between items-center rounded-lg px-2 py-2 text-left mb-6">
           <!-- Dropdown item title -->
           <span class="font-medium text-base font-roboto flex gap-2 items-center">
             <!-- SVG icon -->
-            <component :is="item.svg" class="w-6 h-6" :class="indexValue === index || route.fullPath.includes(item.title.toLowerCase()) ? 'active-svg' : ''" />
+            <component :is="item.svg" class="w-6 h-6"
+              :class="indexValue === index || route.fullPath.includes(item.title.toLowerCase()) ? 'active-svg' : ''" />
             {{ item.title }}
           </span>
           <!-- Chevron icon for dropdown toggle -->
@@ -44,7 +45,6 @@
 import { ref } from "vue";
 import { dropdownSidebarList } from "../../utils/helper";
 const route = useRoute()
-console.log(route, "route")
 // Define props for the component
 defineProps<{
   sidebarHandler: () => void;

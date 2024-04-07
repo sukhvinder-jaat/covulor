@@ -1,7 +1,7 @@
 <template>
-  <div class="overflow-hidden mb-10">
+  <div class="overflow-x-hidden mb-10">
     <div
-      class="w-full overflow-x-auto min-[1160px]:max-w-[833px] lg:max-w-[700px] min-[1250px]:max-w-full pb-2"
+      class="w-full overflow-x-auto min-[1160px]:max-w-[833px] lg:max-w-[700px] min-[1250px]:max-w-[1000px] pb-2"
     >
       <table class="bg-[#F5F7FB] min-w-[903px] w-full">
         <thead class="ps-5">

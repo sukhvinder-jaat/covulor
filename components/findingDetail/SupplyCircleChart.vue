@@ -1,10 +1,10 @@
 <template>
   <!-- Vue component template -->
   <div
-    class="flex mt-8 flex-wrap w-full 2xl:gap-0 bg-white justify-evenly lg:justify-start xl:justify-between 2xl:justify-start p-6 rounded-lg shadow-[0px_2px_20px_0px_#0000000D] software_card"
+    class="flex mt-8 flex-wrap w-full 2xl:gap-0 bg-white justify-evenly lg:justify-start xl:justify-between 2xl:justify-start p-6 rounded-lg shadow-[0px_2px_20px_0px_#0000000D] finding_detail_chart"
   >
     <div
-      v-for="(dataItem, index) in supplyChainChart"
+      v-for="(dataItem, index) in findingSupplyChainChart"
       :key="index"
       class="chart w-[13%] min-w-[135px] flex flex-col justify-center"
     >
@@ -17,7 +17,7 @@
       <ClientOnly>
         <VueApexCharts
           type="radialBar"
-          :options="options"
+          :options="chartOptions(dataItem.color)"
           :series="[dataItem.value]"
           :width="120"
           :height="170"
@@ -39,11 +39,11 @@ const options = {
   plotOptions: {
     radialBar: {
       hollow: {
-        size: "50%",
+        size: "45%",
         color: "#E6E6E6",
       },
       dataLabels: {
-        show: true,
+        show: false,
         name: {
           show: false,
         },
@@ -57,17 +57,24 @@ const options = {
       },
     },
   },
-  colors: ["#05CB0C"],
+};
+
+const chartOptions = (color: string) => {
+  return {
+    ...options,
+    colors: [color],
+  };
 };
 </script>
 
 <style>
 /* Vue component scoped styles */
-.software_card .vue-apexcharts {
+.finding_detail_chart .vue-apexcharts {
   display: flex !important;
   justify-content: center !important;
+  max-height: 150px !important;
 }
-.software_card .chart:last-child {
+.finding_detail_chart .chart:last-child {
   width: 189px;
 }
 </style>

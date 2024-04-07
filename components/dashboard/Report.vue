@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { toast } from "vue3-toastify";
+import 'vue3-toastify/dist/index.css';
 // Data
 const title = ['Diary', 'Diary ', ' Diary']
 const selected = ref(title[0])

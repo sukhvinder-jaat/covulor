@@ -7,7 +7,9 @@
     />
     <FindingDetailAppPlugin />
     <FindingDetailDataImporter />
+    <FindingDetailSlsa />
     <FindingDetailSoftwareChain />
+    <FindingDetailOwsapTop />
   </div>
 </template>
 <script setup lang="ts">

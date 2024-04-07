@@ -26,7 +26,7 @@ const isSidebarVisible = ref(false);
 const toggleSidebarVisibility = () => {
     isSidebarVisible.value = !isSidebarVisible.value;
 };
-console.log(isSidebarVisible, "isSidebarVisible")
+
 // Watch for changes in sidebar visibility to control body overflow
 watch(isSidebarVisible, (newValue) => {
     if (newValue) {

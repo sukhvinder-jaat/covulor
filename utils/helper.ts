@@ -248,7 +248,7 @@ export const dashboardLineChartList = [
       "2024-01-14",
       "2024-02-20",
       "2024-03-28",
-      "2024-05-04"
+      "2024-05-04",
     ],
   },
 ];
@@ -310,7 +310,7 @@ export const findingsLineChartList = [
       "2024-01-14",
       "2024-02-20",
       "2024-03-28",
-      "2024-05-04"
+      "2024-05-04",
     ],
   },
 ];
@@ -399,4 +399,85 @@ export const dataImpoterList = [
   { title: "Impact Original line:", content: "71" },
   { title: "File path:", content: "app/plugin/lastrss.php" },
   { title: "Type:", content: "code_weakness" },
+];
+// finding detai software supply chain
+export const findingSupplyChainChart = [
+  {
+    value: "100",
+    color: "#05CB0C",
+    title: "SAST",
+  },
+  {
+    value: "100",
+    color: "#05CB0C",
+    title: "Secrets / PII",
+  },
+  {
+    value: "100",
+    color: "#05CB0C",
+    title: "IaC security",
+  },
+  {
+    value: "100",
+    color: "#05CB0C",
+    title: "OpenSource Security (SCA)",
+  },
+  {
+    value: "100",
+    color: "#05CB0C",
+    title: "License compliance",
+  },
+  {
+    value: "100",
+    color: "#F91212",
+    title: "SBOM",
+  },
+  {
+    value: "100",
+    color: "#F91212",
+    title: "Cloud Security Posture Management (CSPM)",
+  },
+];
+
+export const findingDetailSourceThreats = [
+  {
+    title: "Submit  unauthorized change",
+    type: "green",
+  },
+  {
+    title: "Compromise  source repo",
+    type: "red",
+  },
+  {
+    title: "Build from  modified source",
+    type: "green",
+  },
+];
+
+//finding detail Build Threats cards
+export const findingDetailbuildThreats = [
+  {
+    title: "Compromise build process",
+    type: "green",
+  },
+  {
+    title: "Upload modified package",
+    type: "green",
+  },
+  {
+    title: "Compromise package registry",
+    type: "red",
+  },
+  {
+    title: "Use compromised package",
+    type: "red",
+  },
+];
+
+// Dependencies Threats cards
+export const findingDetailDependenciesThreats = [
+  {
+    title: "Use compromised package",
+    type: "red",
+  },
 ];
