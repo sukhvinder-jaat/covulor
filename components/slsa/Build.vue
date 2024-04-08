@@ -34,7 +34,7 @@
       <div v-for="(content, index) in dependenciesThreats"
         class="xl:w-full md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full mt-[38px]" :key="index">
         <div class="w-full h-full min-h-[205px]">
-          <Card :type="DEPENDENCIES" :title="content.title" :rank="content.count" :growth="content.growth" />
+          <Card  :type="DEPENDENCIES" :title="content.title" :rank="content.count" :growth="content.growth" />
         </div>
       </div>
     </div>
