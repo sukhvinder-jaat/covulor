@@ -46,16 +46,14 @@
       </div>
       <!-- Looping through dependenciesThreats and rendering Card components -->
       <div
-        v-for="(content, index) in dependenciesThreats"
         class="xl:w-full md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full mt-[38px]"
-        :key="index"
       >
         <div class="w-full h-full min-h-[205px]">
           <Card
-            :type="content.type.toLowerCase()"
-            :title="content.findings[0].title"
-            :rank="content.findings[0].count"
-            :growth="content.findings[0].growth"
+            :type="dependenciesThreats.type.toLowerCase()"
+            :title="dependenciesThreats.findings[0].title"
+            :rank="dependenciesThreats.findings[0].count"
+            :growth="dependenciesThreats.findings[0].growth"
           />
         </div>
       </div>
