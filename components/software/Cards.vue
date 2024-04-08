@@ -29,7 +29,6 @@
 
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
-import { supplyChainChartData } from "~/utils/helper";
 
 const options = {
   chart: {
