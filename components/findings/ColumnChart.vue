@@ -64,7 +64,7 @@ const chartOptions = {
         categories: chartDataRepos, // Use the repo names as y-axis categories
         labels: {
             show: true,
-            formatter: (value:any) => value.split('/').pop(), // Format repo names for display
+            formatter: (value: any) => value.split('/').pop(), // Format repo names for display
         }
     },
     fill: {
