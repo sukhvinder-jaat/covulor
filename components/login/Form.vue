@@ -52,8 +52,8 @@
         </template>
       </URadio>
     </div>
-    <UButton class="" block size="lg" @click="login"
-      ><span class="text-base">Login</span></UButton
+    <UButton class="font-inter font-semibold text-[13px] text-white bg-purple py-2 px-3 sm:px-[17px] sm:py-[10px] rounded-md border border-purple hover:bg-white hover:text-purple transition-all ease-in-out duration-300 leading-[15px] block w-full" @click="login"
+      >Login</UButton
     >
   </form>
 </template>
