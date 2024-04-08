@@ -1,7 +1,9 @@
 <template>
   <!-- Main paragraph with specific styling -->
-  <p class="text-midnightBlue font-roboto text-2xl md:text-3xl font-bold leading-[93%] tracking-[-0.64px] mb-[27px] mt-[33px]"
-    id="slsa">
+  <p
+    class="text-midnightBlue font-roboto text-2xl md:text-3xl font-bold leading-[93%] tracking-[-0.64px] mb-[27px] mt-[33px]"
+    id="slsa"
+  >
     SLSA
   </p>
   <!-- Border with padding and a hidden Heading component -->
@@ -10,14 +12,24 @@
   </div>
   <!-- Container for cards with responsive styling -->
   <div
-    class="xl:mb-[57px] justify-center md:justify-start mt-[38px] xl:gap-y-10 xl:gap-x-10 xl:flex-nowrap gap-y-6 flex flex-wrap w-full xl:max-w-[60%] 2xl:pe-10 xl:pe-6">
+    class="xl:mb-[57px] justify-center md:justify-start mt-[38px] xl:gap-y-10 xl:gap-x-10 xl:flex-nowrap gap-y-6 flex flex-wrap w-full xl:max-w-[60%] 2xl:pe-10 xl:pe-6"
+    v-for="(content, index) in sourceThreats"
+  >
     <!-- Looping through sourceThreats and rendering Card components -->
-    <div v-for="(content, index) in sourceThreats" class="xl:w-1/3 md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full"
-      :key="index">
+    <div
+      class="xl:w-1/3 md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full"
+      :key="index"
+      v-for="(value, i) in content.findings"
+    >
       <!-- Container for individual card with fixed height -->
-      <div class="w-full h-full min-h-[205px]">
+      <div class="w-full h-full min-h-[205px]" :key="i">
         <!-- Rendering Card component with dynamic props -->
-        <Card :type="SOURCE" :title="content.title" :rank="content.count" :growth="content.growth" />
+        <Card
+          :type="content.type"
+          :title="value.title"
+          :rank="value.count"
+          :growth="value.growth"
+        />
       </div>
     </div>
   </div>
@@ -35,13 +47,12 @@ import Heading from "../common/Heading.vue"; // Importing Heading component
 import Build from "./Build.vue"; // Importing Build component
 import Card from "./Card.vue"; // Importing Card component
 import { toast } from "vue3-toastify";
-import 'vue3-toastify/dist/index.css';
-
+import "vue3-toastify/dist/index.css";
 
 const getSlsaThreatsDataHandler = async () => {
   // Function to fetch software chain data
   await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${SOURCE}`);
-}
+};
 
 // Lifecycle hook for component mounted
 onMounted(async () => {
@@ -54,6 +65,5 @@ onMounted(async () => {
       position: toast.POSITION.BOTTOM_RIGHT,
     });
   }
-})
-
+});
 </script>

@@ -7,8 +7,9 @@
             <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Findings Report" />
             <!-- Select menu -->
             <div class="inline-block">
-                <USelectMenu v-model="selected" :options="title" placeholder="diary"
-                    class="border_custom font-medium " />
+                <!-- <USelectMenu v-model="selected" :options="title" placeholder="diary"
+                    class="border_custom font-medium " /> -->
+                <CommonDateRangePicker />
             </div>
         </div>
         <!-- Line graph -->

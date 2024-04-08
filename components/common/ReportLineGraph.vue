@@ -1,6 +1,5 @@
 <template>
   <div class="bg-white relative report_chart sm:ps-8 ps-4 z-0">
-
     <div class="relative z-10">
       <ClientOnly>
         <VueApexCharts width="100%" height="300" type="line" :options="chartOptions" :series="series">
@@ -20,13 +19,13 @@ interface ChartData {
 
 const props = defineProps({
   LineChartList: {
-    type: Array,
+    type: Object,
     default: () => []
   },
   isLegendVisible: Boolean
 })
 
-const chartData: ChartData = (props.LineChartList[0] || {}) as ChartData;
+const chartData: ChartData = (props.LineChartList || {}) as ChartData;
 
 const formattedDates: string[] = formatDates(chartData.dates);
 
