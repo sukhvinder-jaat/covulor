@@ -32,7 +32,8 @@
             </div>
           </div>
           <div class="flex justify-end mt-[28px]">
-            <UButton type="submit" class="w-[142px] text-center rounded-none py-3 justify-center" :class="uploadError? 'cursor-not-allowed': 'cursor-pointer'">Upload</UButton>
+            <UButton type="submit" class="w-[142px] text-center rounded-none py-3 justify-center"
+              :class="uploadError ? 'cursor-not-allowed' : 'cursor-pointer'">Upload</UButton>
           </div>
         </form>
       </div>
@@ -70,10 +71,11 @@ const handleSubmit = () => {
 </script>
 
 <style>
-.radio_input div{
+.radio_input div {
   align-items: center !important;
 }
-.radio_input .form-radio:checked{
- background-color: #8220FF !important; 
+
+.radio_input .form-radio:checked {
+  background-color: #8220FF !important;
 }
 </style>
