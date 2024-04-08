@@ -174,30 +174,38 @@ export const buildThreats = [
 ];
 
 // Dependencies Threats cards
-export const dependenciesThreats = [
-  {
-    title: "Use compromised package",
-    count: 15,
-    growth: 35,
-  },
-];
+export const dependenciesThreats = {
+  findings: [
+    {
+      count: 44,
+      growth: 82,
+      title: "Use compromised package",
+    },
+  ],
+  type: "Dependencies",
+};
 
 // Source Threats cards
 export const sourceThreats = [
   {
-    title: "Submit  unauthorized change",
-    count: 31,
-    growth: 35,
-  },
-  {
-    title: "Compromise  source repo",
-    count: 75,
-    growth: 20,
-  },
-  {
-    title: "Build from  modified source",
-    count: 40,
-    growth: 1,
+    findings: [
+      {
+        count: 84,
+        growth: 8,
+        title: "Submit unauthorized change",
+      },
+      {
+        count: 54,
+        growth: 70,
+        title: "Compromise source repo",
+      },
+      {
+        count: 49,
+        growth: 97,
+        title: "Build from modified source",
+      },
+    ],
+    type: "source",
   },
 ];
 
@@ -239,8 +247,7 @@ export const dashboardChartProgressBar = [
   },
 ];
 // FINDINGS REPORT LINE CHART  DATA
-export const dashboardLineChartList =
-{
+export const dashboardLineChartList = {
   series: [
     {
       name: "Findings",
@@ -264,7 +271,6 @@ export const dashboardLineChartList =
     "2024-05-04",
   ],
 };
-
 
 //FINDINGS CIRCULAR CHART DATA
 export const findingCircularChartData = {
@@ -495,106 +501,106 @@ export const findingDetailDependenciesThreats = [
 ];
 
 export const columnChartData = {
-  "findings": [
+  findings: [
     {
-      "findings": 333,
-      "repo": "plexicus/whom-tell"
+      findings: 333,
+      repo: "plexicus/whom-tell",
     },
     {
-      "findings": 134,
-      "repo": "plexicus/owner-yes"
+      findings: 134,
+      repo: "plexicus/owner-yes",
     },
     {
-      "findings": 257,
-      "repo": "plexicus/alone-traditional"
+      findings: 257,
+      repo: "plexicus/alone-traditional",
     },
     {
-      "findings": 230,
-      "repo": "plexicus/card-true"
+      findings: 230,
+      repo: "plexicus/card-true",
     },
     {
-      "findings": 197,
-      "repo": "plexicus/herself-tonight"
+      findings: 197,
+      repo: "plexicus/herself-tonight",
     },
     {
-      "findings": 223,
-      "repo": "plexicus/hard-policy"
+      findings: 223,
+      repo: "plexicus/hard-policy",
     },
     {
-      "findings": 432,
-      "repo": "plexicus/magazine-be"
+      findings: 432,
+      repo: "plexicus/magazine-be",
     },
     {
-      "findings": 23,
-      "repo": "plexicus/civil-rather"
+      findings: 23,
+      repo: "plexicus/civil-rather",
     },
     {
-      "findings": 490,
-      "repo": "plexicus/a-should"
+      findings: 490,
+      repo: "plexicus/a-should",
     },
     {
-      "findings": 408,
-      "repo": "plexicus/simply-carry"
+      findings: 408,
+      repo: "plexicus/simply-carry",
     },
     {
-      "findings": 179,
-      "repo": "plexicus/town-education"
+      findings: 179,
+      repo: "plexicus/town-education",
     },
     {
-      "findings": 205,
-      "repo": "plexicus/point-challenge"
+      findings: 205,
+      repo: "plexicus/point-challenge",
     },
     {
-      "findings": 412,
-      "repo": "plexicus/through-strategy"
+      findings: 412,
+      repo: "plexicus/through-strategy",
     },
     {
-      "findings": 39,
-      "repo": "plexicus/finally-democratic"
+      findings: 39,
+      repo: "plexicus/finally-democratic",
     },
     {
-      "findings": 416,
-      "repo": "plexicus/tough-series"
+      findings: 416,
+      repo: "plexicus/tough-series",
     },
     {
-      "findings": 425,
-      "repo": "plexicus/upon-still"
+      findings: 425,
+      repo: "plexicus/upon-still",
     },
     {
-      "findings": 420,
-      "repo": "plexicus/pull-staff"
+      findings: 420,
+      repo: "plexicus/pull-staff",
     },
     {
-      "findings": 6,
-      "repo": "plexicus/long-man"
+      findings: 6,
+      repo: "plexicus/long-man",
     },
     {
-      "findings": 344,
-      "repo": "plexicus/mother-hour"
+      findings: 344,
+      repo: "plexicus/mother-hour",
     },
     {
-      "findings": 198,
-      "repo": "plexicus/wide-west"
+      findings: 198,
+      repo: "plexicus/wide-west",
     },
     {
-      "findings": 178,
-      "repo": "plexicus/call-development"
+      findings: 178,
+      repo: "plexicus/call-development",
     },
     {
-      "findings": 305,
-      "repo": "plexicus/notice-seek"
+      findings: 305,
+      repo: "plexicus/notice-seek",
     },
     {
-      "findings": 362,
-      "repo": "plexicus/item-lawyer"
+      findings: 362,
+      repo: "plexicus/item-lawyer",
     },
     {
-      "findings": 145,
-      "repo": "plexicus/know-me"
+      findings: 145,
+      repo: "plexicus/know-me",
     },
     {
-      "findings": 432,
-      "repo": "plexicus/eat-start"
-    }
-  ]
-}
+      findings: 432,
+      repo: "plexicus/eat-start",
+    },
+  ],
+};
