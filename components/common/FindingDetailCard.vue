@@ -40,7 +40,7 @@
           buttonText
           }}</span>
       </UButton> -->
-      <CommonModal/>
+      <FindingDetailModal/>
       <p class="text-center pt-2.5 tracking-[-.28px] font-roboto font-normal text-purple text-sm">
         {{ remediationDetails }}
       </p>
