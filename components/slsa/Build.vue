@@ -10,27 +10,25 @@
       <!-- Container for individual build threats -->
       <div
         class="mt-[38px] xl:mb-0 mb-6 xl:gap-y-10 xl:gap-x-10 xl:flex-nowrap justify-center gap-y-6 w-full flex flex-wrap"
-        v-for="(content, index) in buildThreats"
-        :class="
-          index === 0
-            ? '!xl:pl-0'
-            : '' || index === buildThreats.length - 1
-            ? '!xl:pr-0 !xl:pe-0'
-            : ''
-        "
-        :key="index"
       >
         <!-- Looping through buildThreats and rendering Card components -->
         <div
-          v-for="(value, i) in content.findings"
-          :key="i"
           class="xl:w-3/12 md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full h-full min-h-[205px]"
+          v-for="(content, index) in buildThreats.findings"
+          :class="
+            index === 0
+              ? '!xl:pl-0'
+              : '' || index === buildThreats.findings.length - 1
+              ? '!xl:pr-0 !xl:pe-0'
+              : ''
+          "
+          :key="index"
         >
           <Card
-            :type="content.type"
-            :title="value.title"
-            :rank="value.count"
-            :growth="value.growth"
+            :type="buildThreats.type"
+            :title="content.title"
+            :rank="content.count"
+            :growth="content.growth"
           />
         </div>
       </div>

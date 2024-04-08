@@ -13,22 +13,21 @@
   <!-- Container for cards with responsive styling -->
   <div
     class="xl:mb-[57px] justify-center md:justify-start mt-[38px] xl:gap-y-10 xl:gap-x-10 xl:flex-nowrap gap-y-6 flex flex-wrap w-full xl:max-w-[60%] 2xl:pe-10 xl:pe-6"
-    v-for="(content, index) in sourceThreats"
   >
     <!-- Looping through sourceThreats and rendering Card components -->
     <div
       class="xl:w-1/3 md:w-4/12 xl:px-0 px-3 small:w-6/12 w-full"
+      v-for="(content, index) in sourceThreats.findings"
       :key="index"
-      v-for="(value, i) in content.findings"
     >
       <!-- Container for individual card with fixed height -->
-      <div class="w-full h-full min-h-[205px]" :key="i">
+      <div class="w-full h-full min-h-[205px]">
         <!-- Rendering Card component with dynamic props -->
         <Card
-          :type="content.type"
-          :title="value.title"
-          :rank="value.count"
-          :growth="value.growth"
+          :type="sourceThreats.type.toLowerCase()"
+          :title="content.title"
+          :rank="content.count"
+          :growth="content.growth"
         />
       </div>
     </div>

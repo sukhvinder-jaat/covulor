@@ -145,33 +145,31 @@ export const supplyChainChart = [
   },
 ];
 // Build Threats cards
-export const buildThreats = [
-  {
-    findings: [
-      {
-        count: 98,
-        growth: 40,
-        title: "Compromise build process",
-      },
-      {
-        count: 38,
-        growth: 92,
-        title: "Upload modified package",
-      },
-      {
-        count: 66,
-        growth: 47,
-        title: "Compromise package registry",
-      },
-      {
-        count: 55,
-        growth: 36,
-        title: "Use compromised package",
-      },
-    ],
-    type: "build",
-  },
-];
+export const buildThreats = {
+  findings: [
+    {
+      count: 98,
+      growth: 40,
+      title: "Compromise build process",
+    },
+    {
+      count: 38,
+      growth: 92,
+      title: "Upload modified package",
+    },
+    {
+      count: 66,
+      growth: 47,
+      title: "Compromise package registry",
+    },
+    {
+      count: 55,
+      growth: 36,
+      title: "Use compromised package",
+    },
+  ],
+  type: "build",
+};
 
 // Dependencies Threats cards
 export const dependenciesThreats = {
@@ -186,28 +184,26 @@ export const dependenciesThreats = {
 };
 
 // Source Threats cards
-export const sourceThreats = [
-  {
-    findings: [
-      {
-        count: 84,
-        growth: 8,
-        title: "Submit unauthorized change",
-      },
-      {
-        count: 54,
-        growth: 70,
-        title: "Compromise source repo",
-      },
-      {
-        count: 49,
-        growth: 97,
-        title: "Build from modified source",
-      },
-    ],
-    type: "source",
-  },
-];
+export const sourceThreats = {
+  findings: [
+    {
+      count: 84,
+      growth: 8,
+      title: "Submit unauthorized change",
+    },
+    {
+      count: 54,
+      growth: 70,
+      title: "Compromise source repo",
+    },
+    {
+      count: 49,
+      growth: 97,
+      title: "Build from modified source",
+    },
+  ],
+  type: "source",
+};
 
 // Chart progress bar data
 export const chartProgressBar = [
