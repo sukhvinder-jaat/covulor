@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div>   
         <div class="UButton_modal">
             <UButton color="primary" size="xs" block variant="solid" label="Open" @click="isOpen = true">
                 <span class="font-roboto font-normal text-xl tracking-[-.4px]">
                     Create AI Remedation
                 </span>
             </UButton>
-            <UModal v-model="isOpen" :overlay="true" class="relative common_modal">
+            <UModal v-model="isOpen" :overlay="true" class="relative common_modal !w-full">
                 <Icon @click="isOpen = false" name="i-heroicons-x-mark-20-solid"
                     class=" text-black  w-6 h-6 cursor-pointer absolute end-0 top-0 mt-2 mr-3" />
                 <div class=" bg-white p-5 md:p-0 md:pb-[57px]">
@@ -65,5 +65,6 @@ const isOpen = ref(false)
 
 .common_modal #headlessui-dialog-panel-nHAJMhYDoe7_4{
 max-width: 1102px !important;
+width: 100% !important;
 }
 </style>
