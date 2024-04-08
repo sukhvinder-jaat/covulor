@@ -28,7 +28,7 @@ const height = 300;
 
 const chartDataItems = columnChartData[0].findings.map(item => item.findings);
 const chartDataRepos = columnChartData[0].findings.map(item => item.repo);
-
+console.log(chartDataItems, "chartDataItemschartDataItems", chartDataRepos)
 const chartOptions = {
     chart: {
         height: 280,
@@ -54,18 +54,17 @@ const chartOptions = {
         enabled: true,
     },
     xaxis: {
-        // categories: ['100', '120', '140', '80', '115', '130',
-        //     '100', '120', '140', '80', '115', '130', '100', '120', '140', '80', '115', '130', '100', '120', '140', '80', '115', '130', '130'
-        // ],
         categories: chartDataItems,
         // tickPlacement: 'on'
     },
     yaxis: {
         categories: chartDataRepos, // Use the repo names as y-axis categories
-        labels: {
-            show: true,
-            formatter: (value: any) => value.split('/').pop(), // Format repo names for display
-        }
+        // labels: {
+        //     show: true,
+        //     formatter: function (value: any) {
+        //         return value.split("/").shift();
+        //     },
+        // formatter: (value: any) => value.split('/').pop(), // Format repo names for display}
     },
     fill: {
         type: 'gradient',
@@ -83,7 +82,7 @@ const chartOptions = {
 };
 const series = [{
     name: '  Plexilus /',
-    data: [100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 130],
+    data: chartDataItems,
 }]
 
 
@@ -117,7 +116,6 @@ const series = [{
 }
 
 .apexcharts-toolbar,
-.column_chart .apexcharts-tooltip-title,
 .column_chart .apexcharts-tooltip-marker {
     display: none !important;
 }

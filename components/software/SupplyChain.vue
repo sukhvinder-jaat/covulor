@@ -3,7 +3,7 @@
     <!-- Custom Heading for the Software Supply Chain -->
     <CommonHeading id="software" :icon="github" title="SOFTWARE SUPPLY CHAIN" />
     <!-- Pass the supplyChainCharts array as a prop to the Cards component -->
-    <SoftwareCards :supplyChainChartData="supplyChainChartData"  />
+    <SoftwareCards />
   </div>
 </template>
 
