@@ -25,6 +25,7 @@
       </div>
     </div>
     <RepositoriesTable />
+   
   </div>
 </template>
 <script setup lang="ts">
@@ -34,9 +35,16 @@ definePageMeta({
   layout: "home",
 });
 const tagsOption = ["Github", "Bitbucket", "GitLab"];
+
+
 </script>
 <style setup>
 #headlessui-popover-panel-ndcv2Y3vSTA_23 {
   overflow: visible !important;
 }
+/* .repo_pagination button {
+  background-color: transparent !important;
+  border: none;
+  color: #6e6893;
+} */
 </style>

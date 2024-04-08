@@ -23,11 +23,12 @@
 // Import VueApexCharts
 import VueApexCharts from "vue3-apexcharts";
 const Repositories = ['covulor', 'covulor1', 'covulor2', 'covulor3']
-
 const selected = ref(Repositories[0])
 const height = 300;
 
-
+const chartDataItems = columnChartData[0].findings.map(item => item.findings);
+const chartDataRepos = columnChartData[0].findings.map(item => item.repo);
+console.log(chartDataItems, "chartDataItemschartDataItems", chartDataRepos)
 const chartOptions = {
     chart: {
         height: 280,
@@ -53,13 +54,18 @@ const chartOptions = {
         enabled: true,
     },
     xaxis: {
-        categories: ['100', '120', '140', '80', '115', '130',
-            '100', '120', '140', '80', '115', '130', '100', '120', '140', '80', '115', '130', '100', '120', '140', '80', '115', '130', '130'
-        ],
+        categories: chartDataItems,
         // tickPlacement: 'on'
     },
     yaxis: {
+        // categories: chartDataRepos, // Use the repo names as y-axis categories/
         show: false
+        // labels: {
+        //     show: true,
+        //     formatter: function (value: any) {
+        //         return value.split("/").shift();
+        //     },
+        // formatter: (value: any) => value.split('/').pop(), // Format repo names for display}
     },
     fill: {
         type: 'gradient',
@@ -77,8 +83,10 @@ const chartOptions = {
 };
 const series = [{
     name: '  Plexilus /',
-    data: [100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 100, 120, 140, 80, 115, 130, 130],
+    data: chartDataItems,
 }]
+
+
 </script>
 <style>
 .vue-apexcharts {
