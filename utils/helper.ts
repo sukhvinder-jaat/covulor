@@ -104,38 +104,46 @@ export const topRank = [
   },
 ];
 
+export const supplyChainChartData = {
+  "Cloud Security Posture Management (CSPM)": 48,
+  "IaC Security": 63,
+  "License Compliance": 69,
+  "OpenSource Security (SCA)": 59,
+  SAST: 82,
+  SBOM: 1,
+  "Secrets / PII": 98,
+};
 // Radial chart data
 export const supplyChainChart = [
   {
-    value: "100",
+    value: "82",
     title: "SAST",
   },
   {
-    value: "90",
+    value: "98",
     title: "Secrets / PII",
   },
   {
-    value: "100",
+    value: "63",
     title: "IaC security",
   },
   {
-    value: "100",
+    value: "59",
     title: "OpenSource Security (SCA)",
   },
   {
-    value: "100",
+    value: "69",
     title: "License compliance",
   },
   {
-    value: "75",
+    value: "1",
     title: "SBOM",
   },
   {
-    value: "20",
+    value: "48",
     title: "Cloud Security Posture Management (CSPM)",
   },
 ];
-
 // Build Threats cards
 export const buildThreats = [
   {

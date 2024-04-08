@@ -10,7 +10,7 @@
         v-for="(content, index) in risks"
         :key="index"
       >
-        <div class="w-full h-full min-h-[205px]">
+        <div class="w-full h-full min-h-[166px] hover:scale-95 duration-300">
           <!-- Cards component with dynamic title, description, and rank -->
           <div
             class="h-full rounded-2xl"
@@ -20,11 +20,30 @@
                 : 'shadow-[0px_0px_30px_0px_#FF010157]'
             "
           >
-            <OwaspCards
-              :title="content.title"
-              :description="content.description"
-              :rank="content.amount"
-            />
+            <div
+              class="h-full pt-[39px] px-[11px] bg-white pb-[14px] flex flex-col items-center rounded-2xl justify-between"
+            >
+              <div class="flex flex-col justify-center items-center">
+                <!-- Title of the card -->
+                <p
+                  class="font-epilogue text-3xl text-gunSmoke leading-[normal] font-bold mb-[5px] text-center"
+                >
+                  {{ content.title }}
+                </p>
+
+                <!-- Divider -->
+                <div class="bg-black h-[1px] mb-[15px] w-[118px]"></div>
+
+                <!-- Description of the card (if it's an array, loop through each item) -->
+                <!-- <template> -->
+                <p
+                  class="text-gunSmoke text-center font-epilogue text-sm font-normal mb-[6px] max-w-[99px] w-full !leading-[120%]"
+                >
+                  {{ content.description }}
+                </p>
+                <!-- </template> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
