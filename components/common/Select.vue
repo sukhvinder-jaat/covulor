@@ -3,7 +3,7 @@
     <USelect
       color="white"
       variant="outline"
-      :options="options"
+      :options="option"
       v-model="selectedRepository"
     />
     <span v-if="uploadError" class="text-red-500 text-sm leading-none">{{
@@ -19,6 +19,6 @@ const getErrorMessage = computed(() =>
   selectedRepository.value === "" ? "Select a repo" : ""
 );
 defineProps({
-  options: Array,
+  option: Array,
 });
 </script>
