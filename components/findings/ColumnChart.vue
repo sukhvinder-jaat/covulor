@@ -43,8 +43,8 @@ const customTooltip = ({ dataPointIndex }: { dataPointIndex: number }) => {
   return ` <div class="p-2 max-w-[211px] truncate">${repoName}</div>`;
 };
 
-const chartDataItems = columnChartData[0].findings.map((item) => item.findings);
-const chartDataRepos = columnChartData[0].findings.map((item) => item.repo);
+const chartDataItems = columnChartData.findings.map(item => item.findings);
+const chartDataRepos = columnChartData.findings.map(item => item.repo);
 const chartOptions = {
   chart: {
     height: 290,

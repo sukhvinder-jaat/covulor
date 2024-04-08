@@ -247,32 +247,30 @@ export const dashboardChartProgressBar = [
   },
 ];
 // FINDINGS REPORT LINE CHART  DATA
-export const dashboardLineChartList = [
-  {
-    series: [
-      {
-        name: "Findings",
-        data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
-      },
-      {
-        name: "Ready to remediate",
-        data: [1500, 4000, 5000, 9000, 6000, 4000, 6000],
-      },
-    ],
-    dates: [
-      "2023-06-06",
-      "2023-07-13",
-      "2023-08-19",
-      "2023-09-25",
-      "2023-11-01",
-      "2023-12-08",
-      "2024-01-14",
-      "2024-02-20",
-      "2024-03-28",
-      "2024-05-04",
-    ],
-  },
-];
+export const dashboardLineChartList = {
+  series: [
+    {
+      name: "Findings",
+      data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
+    },
+    {
+      name: "Ready to remediate",
+      data: [1500, 4000, 5000, 9000, 6000, 4000, 6000],
+    },
+  ],
+  dates: [
+    "2023-06-06",
+    "2023-07-13",
+    "2023-08-19",
+    "2023-09-25",
+    "2023-11-01",
+    "2023-12-08",
+    "2024-01-14",
+    "2024-02-20",
+    "2024-03-28",
+    "2024-05-04",
+  ],
+};
 
 //FINDINGS CIRCULAR CHART DATA
 export const findingCircularChartData = {
@@ -309,32 +307,31 @@ export const findingPieChartData = {
 };
 
 // FINDINGS REPORT LINE CHART  DATA
-export const findingsLineChartList = [
-  {
-    series: [
-      {
-        name: "Findings Without action plan",
-        data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
-      },
-      {
-        name: "Findings With acction plan",
-        data: [1500, 3900, 4800, 9000, 6000, 4000, 6000],
-      },
-    ],
-    dates: [
-      "2023-06-06",
-      "2023-07-13",
-      "2023-08-19",
-      "2023-09-25",
-      "2023-11-01",
-      "2023-12-08",
-      "2024-01-14",
-      "2024-02-20",
-      "2024-03-28",
-      "2024-05-04",
-    ],
-  },
-];
+export const findingsLineChartList = {
+  series: [
+    {
+      name: "Findings Without action plan",
+      data: [6000, 4400, 6200, 4000, 6400, 3500, 4500, 6000, 5500, 7000],
+    },
+    {
+      name: "Findings With acction plan",
+      data: [1500, 3900, 4800, 9000, 6000, 4000, 6000],
+    },
+  ],
+  dates: [
+    "2023-06-06",
+    "2023-07-13",
+    "2023-08-19",
+    "2023-09-25",
+    "2023-11-01",
+    "2023-12-08",
+    "2024-01-14",
+    "2024-02-20",
+    "2024-03-28",
+    "2024-05-04",
+  ],
+};
+
 export interface ContextData {
   headers: string[];
   data: {
@@ -503,109 +500,107 @@ export const findingDetailDependenciesThreats = [
   },
 ];
 
-export const columnChartData = [
-  {
-    findings: [
-      {
-        findings: 333,
-        repo: "plexicus/whom-tell",
-      },
-      {
-        findings: 134,
-        repo: "plexicus/owner-yes",
-      },
-      {
-        findings: 257,
-        repo: "plexicus/alone-traditional",
-      },
-      {
-        findings: 230,
-        repo: "plexicus/card-true",
-      },
-      {
-        findings: 197,
-        repo: "plexicus/herself-tonight",
-      },
-      {
-        findings: 223,
-        repo: "plexicus/hard-policy",
-      },
-      {
-        findings: 432,
-        repo: "plexicus/magazine-be",
-      },
-      {
-        findings: 23,
-        repo: "plexicus/civil-rather",
-      },
-      {
-        findings: 490,
-        repo: "plexicus/a-should",
-      },
-      {
-        findings: 408,
-        repo: "plexicus/simply-carry",
-      },
-      {
-        findings: 179,
-        repo: "plexicus/town-education",
-      },
-      {
-        findings: 205,
-        repo: "plexicus/point-challenge",
-      },
-      {
-        findings: 412,
-        repo: "plexicus/through-strategy",
-      },
-      {
-        findings: 39,
-        repo: "plexicus/finally-democratic",
-      },
-      {
-        findings: 416,
-        repo: "plexicus/tough-series",
-      },
-      {
-        findings: 425,
-        repo: "plexicus/upon-still",
-      },
-      {
-        findings: 420,
-        repo: "plexicus/pull-staff",
-      },
-      {
-        findings: 6,
-        repo: "plexicus/long-man",
-      },
-      {
-        findings: 344,
-        repo: "plexicus/mother-hour",
-      },
-      {
-        findings: 198,
-        repo: "plexicus/wide-west",
-      },
-      {
-        findings: 178,
-        repo: "plexicus/call-development",
-      },
-      {
-        findings: 305,
-        repo: "plexicus/notice-seek",
-      },
-      {
-        findings: 362,
-        repo: "plexicus/item-lawyer",
-      },
-      {
-        findings: 145,
-        repo: "plexicus/know-me",
-      },
-      {
-        findings: 432,
-        repo: "plexicus/eat-start",
-      },
-    ],
-  },
-];
+export const columnChartData = {
+  findings: [
+    {
+      findings: 333,
+      repo: "plexicus/whom-tell",
+    },
+    {
+      findings: 134,
+      repo: "plexicus/owner-yes",
+    },
+    {
+      findings: 257,
+      repo: "plexicus/alone-traditional",
+    },
+    {
+      findings: 230,
+      repo: "plexicus/card-true",
+    },
+    {
+      findings: 197,
+      repo: "plexicus/herself-tonight",
+    },
+    {
+      findings: 223,
+      repo: "plexicus/hard-policy",
+    },
+    {
+      findings: 432,
+      repo: "plexicus/magazine-be",
+    },
+    {
+      findings: 23,
+      repo: "plexicus/civil-rather",
+    },
+    {
+      findings: 490,
+      repo: "plexicus/a-should",
+    },
+    {
+      findings: 408,
+      repo: "plexicus/simply-carry",
+    },
+    {
+      findings: 179,
+      repo: "plexicus/town-education",
+    },
+    {
+      findings: 205,
+      repo: "plexicus/point-challenge",
+    },
+    {
+      findings: 412,
+      repo: "plexicus/through-strategy",
+    },
+    {
+      findings: 39,
+      repo: "plexicus/finally-democratic",
+    },
+    {
+      findings: 416,
+      repo: "plexicus/tough-series",
+    },
+    {
+      findings: 425,
+      repo: "plexicus/upon-still",
+    },
+    {
+      findings: 420,
+      repo: "plexicus/pull-staff",
+    },
+    {
+      findings: 6,
+      repo: "plexicus/long-man",
+    },
+    {
+      findings: 344,
+      repo: "plexicus/mother-hour",
+    },
+    {
+      findings: 198,
+      repo: "plexicus/wide-west",
+    },
+    {
+      findings: 178,
+      repo: "plexicus/call-development",
+    },
+    {
+      findings: 305,
+      repo: "plexicus/notice-seek",
+    },
+    {
+      findings: 362,
+      repo: "plexicus/item-lawyer",
+    },
+    {
+      findings: 145,
+      repo: "plexicus/know-me",
+    },
+    {
+      findings: 432,
+      repo: "plexicus/eat-start",
+    },
+  ],
+};
