@@ -64,7 +64,7 @@ const toggleDropdownHandler = (index: number) => {
 };
 </script>
 
-<style scoped>
+<style>
 /* Styling for the active SVG icon */
 .active-svg path {
   fill: #8220ff;
