@@ -4,21 +4,21 @@
     class="flex mt-8 flex-wrap w-full 2xl:gap-0 bg-white justify-evenly lg:justify-start xl:justify-between 2xl:justify-start p-6 rounded-lg shadow-[0px_2px_20px_0px_#0000000D] software_card"
   >
     <div
-      v-for="(dataItem, index) in supplyChainChart"
-      :key="index"
+      v-for="(value, title) in supplyChainChartData"
+      :key="title"
       class="chart w-[13%] min-w-[135px] flex flex-col justify-center"
     >
       <!-- Your chart content here -->
       <h3
         class="text-center chart_label font-bold text-base text-comet h-[65px] flex items-center justify-center max-w-[171px] mx-auto mb-[-10px] font-manrope"
       >
-        {{ dataItem.title }}
+        {{ title }}
       </h3>
       <ClientOnly>
         <VueApexCharts
           type="radialBar"
           :options="options"
-          :series="[dataItem.value]"
+          :series="[value]"
           :width="120"
           :height="170"
         ></VueApexCharts>
@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
+import { supplyChainChartData } from "~/utils/helper";
 
 const options = {
   chart: {
@@ -66,8 +67,9 @@ const options = {
 .software_card .vue-apexcharts {
   display: flex !important;
   justify-content: center !important;
+  max-height: 150px;
 }
-.software_card .chart:last-child {
+.software_card .chart:first-child {
   width: 189px;
 }
 </style>
