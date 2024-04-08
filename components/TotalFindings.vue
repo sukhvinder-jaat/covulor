@@ -6,8 +6,9 @@
       <!-- Custom chart heading component -->
       <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Total Findings" />
       <div class="inline-block pt-2">
-        <USelectMenu v-model="selected" :options="year" placeholder="Last Year"
-          class="border border-1 border-iron pb-[6px] pt-1 px-2 sm:py-[6px] sm:px-3 rounded" />
+        <!-- <USelectMenu v-model="selected" :options="year" placeholder="Last Year"
+          class="border border-1 border-iron pb-[6px] pt-1 px-2 sm:py-[6px] sm:px-3 rounded" /> -->
+        <CommonDateRangePicker />
       </div>
     </div>
     <!-- Chart section -->
