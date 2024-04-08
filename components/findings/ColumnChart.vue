@@ -26,12 +26,18 @@ const Repositories = ['covulor', 'covulor1', 'covulor2', 'covulor3']
 const selected = ref(Repositories[0])
 const height = 300;
 
+const customTooltip = ({ dataPointIndex }: { dataPointIndex: number }) => {
+    const repoName = chartDataRepos[dataPointIndex];
+    return (
+        ` <div class="p-2 max-w-[211px] truncate">${repoName}</div>`
+    );
+};
+
 const chartDataItems = columnChartData[0].findings.map(item => item.findings);
 const chartDataRepos = columnChartData[0].findings.map(item => item.repo);
-console.log(chartDataItems, "chartDataItemschartDataItems", chartDataRepos)
 const chartOptions = {
     chart: {
-        height: 280,
+        height: 290,
         type: 'bar',
     },
     plotOptions: {
@@ -52,20 +58,14 @@ const chartOptions = {
     },
     tooltip: {
         enabled: true,
+        custom: customTooltip,
     },
     xaxis: {
         categories: chartDataItems,
         // tickPlacement: 'on'
     },
     yaxis: {
-        // categories: chartDataRepos, // Use the repo names as y-axis categories/
         show: false
-        // labels: {
-        //     show: true,
-        //     formatter: function (value: any) {
-        //         return value.split("/").shift();
-        //     },
-        // formatter: (value: any) => value.split('/').pop(), // Format repo names for display}
     },
     fill: {
         type: 'gradient',
