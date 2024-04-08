@@ -113,28 +113,28 @@ const passwordFieldType = computed(() =>
 );
 </script>
 
-<style>
-.error-text {
-  color: red;
-  font-size: 12px;
-  line-height: 10px;
-}
+  <style>
+  .error-text {
+    color: red;
+    font-size: 12px;
+    line-height: 10px;
+  }
 
-.input_custom_login input {
-  @apply !ring-0 border border-mediumlightgray !rounded-xl;
-}
+  .input_custom_login input {
+    @apply !ring-0 border border-mediumlightgray !rounded-xl;
+  }
 
-.input_custom_login input:focus {
-  @apply !ring border-transparent !rounded-xl;
-}
+  .input_custom_login input:focus {
+    @apply !ring border-transparent !rounded-xl;
+  }
 
-.error-container {
-  margin-top: 10px;
-}
-.radio_input div{
-  align-items: center !important;
-}
-.radio_input .form-radio:checked{
- background-color: #8220FF !important; 
-}
-</style>
+  .error-container {
+    margin-top: 10px;
+  }
+  .radio_input div{
+    align-items: center !important;
+  }
+  .radio_input .form-radio:checked{
+  background-color: #8220FF !important; 
+  }
+  </style>
