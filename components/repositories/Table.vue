@@ -71,7 +71,7 @@
                 <span
                   label="Close"
                   @click="close"
-                  class="top-[-12%] end-[-7%] absolute cursor-pointer"
+                  class="top-[-12px] end-[-7px] absolute cursor-pointer"
                 >
                   <IconsPopupCross />
                 </span>
