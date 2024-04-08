@@ -33,8 +33,8 @@ const customTooltip = ({ dataPointIndex }: { dataPointIndex: number }) => {
     );
 };
 
-const chartDataItems = columnChartData[0].findings.map(item => item.findings);
-const chartDataRepos = columnChartData[0].findings.map(item => item.repo);
+const chartDataItems = columnChartData.findings.map(item => item.findings);
+const chartDataRepos = columnChartData.findings.map(item => item.repo);
 const chartOptions = {
     chart: {
         height: 290,

@@ -19,13 +19,13 @@ interface ChartData {
 
 const props = defineProps({
   LineChartList: {
-    type: Array,
+    type: Object,
     default: () => []
   },
   isLegendVisible: Boolean
 })
 
-const chartData: ChartData = (props.LineChartList[0] || {}) as ChartData;
+const chartData: ChartData = (props.LineChartList || {}) as ChartData;
 
 const formattedDates: string[] = formatDates(chartData.dates);
 
