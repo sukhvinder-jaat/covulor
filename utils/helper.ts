@@ -174,18 +174,16 @@ export const buildThreats = [
 ];
 
 // Dependencies Threats cards
-export const dependenciesThreats = [
-  {
-    findings: [
-      {
-        count: 44,
-        growth: 82,
-        title: "Use compromised package",
-      },
-    ],
-    type: "Dependencies",
-  },
-];
+export const dependenciesThreats = {
+  findings: [
+    {
+      count: 44,
+      growth: 82,
+      title: "Use compromised package",
+    },
+  ],
+  type: "Dependencies",
+};
 
 // Source Threats cards
 export const sourceThreats = [
