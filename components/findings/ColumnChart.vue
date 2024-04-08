@@ -52,7 +52,7 @@ const chartOptions = {
   },
   plotOptions: {
     bar: {
-      borderRadius: 10,
+      borderRadius: 13,
       columnWidth: "60%",
       barHeight: "20%",
     },

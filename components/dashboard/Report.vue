@@ -7,8 +7,6 @@
             <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Findings Report" />
             <!-- Select menu -->
             <div class="inline-block">
-                <!-- <USelectMenu v-model="selected" :options="title" placeholder="diary"
-                    class="border_custom font-medium " /> -->
                 <CommonDateRangePicker />
             </div>
         </div>
@@ -22,9 +20,6 @@
 <script setup lang="ts">
 import { toast } from "vue3-toastify";
 import 'vue3-toastify/dist/index.css';
-// Data
-const title = ['Diary', 'Diary ', ' Diary']
-const selected = ref(title[0])
 
 const getFindingsChatData = async () => {
     await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=06-06-2023&end_date=06-06-2024`);
