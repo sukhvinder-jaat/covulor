@@ -58,7 +58,8 @@ const chartOptions = {
         // tickPlacement: 'on'
     },
     yaxis: {
-        categories: chartDataRepos, // Use the repo names as y-axis categories
+        // categories: chartDataRepos, // Use the repo names as y-axis categories/
+        show: false
         // labels: {
         //     show: true,
         //     formatter: function (value: any) {
@@ -116,6 +117,7 @@ const series = [{
 }
 
 .apexcharts-toolbar,
+.column_chart .apexcharts-tooltip-title,
 .column_chart .apexcharts-tooltip-marker {
     display: none !important;
 }
