@@ -12,7 +12,7 @@
                 <div class=" bg-white p-5 md:p-0 md:pb-[57px]">
                     <div class=" pt-14 md:pt-[92px] md:ps-[79px] md:pr-[70px]">
                         <div class="flex gap-3 items-center border-b border-black pb-5">
-                            <span class="bg-white w-[26px] h-[26px] rounded-[50%]"></span>
+                            <span class=" bg-purple w-[26px] h-[26px] rounded-[50%]"></span>
                             <p class=" font-roboto text-[30px] leading-9 font-bold text-black ">Details</p>
                         </div>
                         <p class="font-roboto text-xl md:text-[30px] leading-[120%] md:leading-9 font-bold text-black mt-[23px] max-w-[600px]">[Asset
