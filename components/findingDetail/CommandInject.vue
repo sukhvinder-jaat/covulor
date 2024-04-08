@@ -9,11 +9,11 @@
         Command Injection - lastrss.php: 71
       </h2>
       <span
-        class="me-[14px] bg-lawnGreen text-center w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
+        class="me-[14px] bg-lawnGreen text-center w-[121px] py-1 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
         >Code_weakness</span
       >
       <span
-        class="me-[14px] text-center bg-lightBlue w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
+        class="me-[14px] text-center bg-lightBlue w-[121px] py-1 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
         >Done</span
       >
     </div>

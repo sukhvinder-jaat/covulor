@@ -9,11 +9,11 @@
         Plexicus/-OWASPWebGoatPHP
       </h2>
       <span
-        class="me-[14px] bg-lightGreen text-center w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
+        class="me-[14px] bg-lightGreen text-center w-[121px] py-1 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
         >Active</span
       >
       <span
-        class="me-[14px] text-center bg-purple w-[121px] py-1.5 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
+        class="me-[14px] text-center bg-purple w-[121px] py-1 rounded-full hover:bg-opacity-75 duration-300 text-white font-roboto font-normal text-[13px] inline-block"
         >Git Repository</span
       >
     </div>
