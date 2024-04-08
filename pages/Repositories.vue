@@ -25,6 +25,9 @@
       </div>
     </div>
     <RepositoriesTable />
+    <div class="flex justify-end mb-5 repo_pagination">
+      <UPagination v-model="page" :page-count="5" :total="items.length" />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -34,9 +37,17 @@ definePageMeta({
   layout: "home",
 });
 const tagsOption = ["Github", "Bitbucket", "GitLab"];
+
+const page = ref(1);
+const items = ref(Array(55));
 </script>
 <style setup>
 #headlessui-popover-panel-ndcv2Y3vSTA_23 {
   overflow: visible !important;
 }
+/* .repo_pagination button {
+  background-color: transparent !important;
+  border: none;
+  color: #6e6893;
+} */
 </style>
