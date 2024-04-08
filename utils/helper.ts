@@ -147,24 +147,29 @@ export const supplyChainChart = [
 // Build Threats cards
 export const buildThreats = [
   {
-    title: "Compromise build process",
-    count: 43,
-    growth: 31,
-  },
-  {
-    title: "Upload modified package",
-    count: 81,
-    growth: 35,
-  },
-  {
-    title: "Compromise package registry",
-    count: 7,
-    growth: 35,
-  },
-  {
-    title: "Use compromised package",
-    count: 65,
-    growth: 35,
+    findings: [
+      {
+        count: 98,
+        growth: 40,
+        title: "Compromise build process",
+      },
+      {
+        count: 38,
+        growth: 92,
+        title: "Upload modified package",
+      },
+      {
+        count: 66,
+        growth: 47,
+        title: "Compromise package registry",
+      },
+      {
+        count: 55,
+        growth: 36,
+        title: "Use compromised package",
+      },
+    ],
+    type: "build",
   },
 ];
 
