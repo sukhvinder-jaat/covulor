@@ -28,8 +28,13 @@
           class="grid text-base md:text-lg overflow-hidden max-h-0 transition-all opacity-0 duration-300 ease-in mt-2 font-sf-pro text-black-natural">
           <template v-for="content in item.content">
             <!-- Content of the dropdown item -->
+            <a :href="content.link"
+              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:inline-block hidden">
+              {{ content.subLink
+              }}<!-- Accessing the link from the array -->
+            </a>
             <a @click="sidebarHandler" :href="content.link"
-              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4">
+              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:hidden inline-block">
               {{ content.subLink
               }}<!-- Accessing the link from the array -->
             </a>
