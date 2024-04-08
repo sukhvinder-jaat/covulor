@@ -65,4 +65,26 @@
 import Heading from "../common/Heading.vue";
 import { buildThreats, dependenciesThreats } from "../../utils/helper"; // Importing buildThreats and dependenciesThreats from helper file
 import Card from "./Card.vue"; // Importing Card component
+import { toast } from "vue3-toastify";
+import 'vue3-toastify/dist/index.css';
+
+
+const getSlsaThreatsDataHandler = async () => {
+  // Function to fetch software chain data
+  await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${BUILD}`);
+  await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${DEPENDENCIES}`);
+}
+
+// Lifecycle hook for component mounted
+onMounted(async () => {
+  try {
+    await getSlsaThreatsDataHandler();
+  } catch (e: any) {
+    // Display an error toast if an exception occurs
+    toast.error(e.message, {
+      autoClose: 2000,
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+  }
+})
 </script>
