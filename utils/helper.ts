@@ -377,18 +377,6 @@ export const contextData: ContextData = {
 };
 export const commonFindingDetails = [
   {
-    title: "Command Injection - lastrss.php: 71",
-    tagfirst: { text: "Code_weakness", bgColor: "bg-lawnGreen" },
-    tagsecond: { text: "Done", bgColor: "bg-lightBlue" },
-    hideText: "",
-    remediationTitle: "AI Remedation",
-    remediationDescription:
-      "I wrapped the content of the file with base64 encoding/decoding to prevent injection through unserialize. This operation will ensure that, even if an attacker somehow manages to inject malicious code into the cache file, it will not be executed when the cache file is read back into the program. Instead, any injected code will merely be treated as base64 encoded string, not executable code.",
-    link: { title: "More Details", textColor: "text-purple" },
-    buttonText: "Create AI Remedation",
-    remediationDetails: "LLM Generated Remediations",
-  },
-  {
     title: "Plexicus/-OWASPWebGoatPHP",
     tagfirst: { text: "Active", bgColor: "bg-lightGreen" },
     tagsecond: { text: "Git Repository", bgColor: "bg-purple" },
