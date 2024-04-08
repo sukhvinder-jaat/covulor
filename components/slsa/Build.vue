@@ -52,10 +52,10 @@
       >
         <div class="w-full h-full min-h-[205px]">
           <Card
-            :type="DEPENDENCIES"
-            :title="content.title"
-            :rank="content.count"
-            :growth="content.growth"
+            :type="content.type.toLowerCase()"
+            :title="content.findings[0].title"
+            :rank="content.findings[0].count"
+            :growth="content.findings[0].growth"
           />
         </div>
       </div>

@@ -176,28 +176,38 @@ export const buildThreats = [
 // Dependencies Threats cards
 export const dependenciesThreats = [
   {
-    title: "Use compromised package",
-    count: 15,
-    growth: 35,
+    findings: [
+      {
+        count: 44,
+        growth: 82,
+        title: "Use compromised package",
+      },
+    ],
+    type: "Dependencies",
   },
 ];
 
 // Source Threats cards
 export const sourceThreats = [
   {
-    title: "Submit  unauthorized change",
-    count: 31,
-    growth: 35,
-  },
-  {
-    title: "Compromise  source repo",
-    count: 75,
-    growth: 20,
-  },
-  {
-    title: "Build from  modified source",
-    count: 40,
-    growth: 1,
+    findings: [
+      {
+        count: 84,
+        growth: 8,
+        title: "Submit unauthorized change",
+      },
+      {
+        count: 54,
+        growth: 70,
+        title: "Compromise source repo",
+      },
+      {
+        count: 49,
+        growth: 97,
+        title: "Build from modified source",
+      },
+    ],
+    type: "source",
   },
 ];
 
