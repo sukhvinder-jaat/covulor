@@ -26,10 +26,10 @@
         >
           <div class="w-full h-full min-h-[205px]">
             <Card
-              :type="BUILD"
-              :title="content.title"
-              :rank="content.count"
-              :growth="content.growth"
+              :type="content.type"
+              :title="content.findings[0].title"
+              :rank="content.findings[0].count"
+              :growth="content.findings[0].growth"
             />
           </div>
         </div>
@@ -66,14 +66,13 @@ import Heading from "../common/Heading.vue";
 import { buildThreats, dependenciesThreats } from "../../utils/helper"; // Importing buildThreats and dependenciesThreats from helper file
 import Card from "./Card.vue"; // Importing Card component
 import { toast } from "vue3-toastify";
-import 'vue3-toastify/dist/index.css';
-
+import "vue3-toastify/dist/index.css";
 
 const getSlsaThreatsDataHandler = async () => {
   // Function to fetch software chain data
   await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${BUILD}`);
   await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${DEPENDENCIES}`);
-}
+};
 
 // Lifecycle hook for component mounted
 onMounted(async () => {
@@ -86,5 +85,5 @@ onMounted(async () => {
       position: toast.POSITION.BOTTOM_RIGHT,
     });
   }
-})
+});
 </script>
