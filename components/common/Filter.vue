@@ -108,8 +108,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-
 const repositoryID = ["1", "2", "3"];
 const sourceControl = [
   "plexicus/AltoroJ",
@@ -121,5 +119,12 @@ const countries = ["United States", "Canada", "Mexico"];
 <style>
 .filter_icon .i-heroicons-funnel-16-solid {
   color: #8220ff;
+}
+@media (max-width: 640px) {
+  .filter_icon .group {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 5px;
+  }
 }
 </style>
