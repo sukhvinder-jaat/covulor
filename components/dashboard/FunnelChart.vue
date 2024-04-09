@@ -15,7 +15,8 @@
         <div class="flex items-center gap-[6px]">
           <span class="size-[13px] rounded-full"
             :class="index === 0 ? 'bg-lawnGreen' : index === 1 ? 'bg-lightGreen' : 'bg-purple'"></span>
-          <p class="font-medium text-sm leading-[150%] text-lightGray font-plus-jakarta">
+          <p
+            class="font-medium text-sm leading-[150%] text-lightGray font-plus-jakarta xl:w-[150px] truncate min-[1350px]:w-auto">
             {{ items.labels }}
           </p>
         </div>
@@ -27,7 +28,7 @@
     <!-- Percentage labels -->
     <p v-for="(items, index) in findingChartData" :key="index"
       class="text-darkGray font-plus-jakarta font-medium text-sm leading-[150%] absolute "
-      :class="index === 0 ? 'top-[27%] left-[19%]' : index === 1 ? 'top-[38%] left-[50%]' : 'top-[43%] right-[20%]'">
+      :class="index === 0 ? 'top-[27%] left-[19%]' : index === 1 ? 'top-[33%] left-[50%]' : 'top-[40%] right-[20%]'">
       {{ items.percentage }}
     </p>
   </div>
