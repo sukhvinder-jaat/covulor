@@ -39,7 +39,7 @@ export const dropdownSidebarList: DropdownItem[] = [
   },
   {
     title: "Conector Page",
-    href: "/",
+    href: "/finding-detail",
     svg: Conector,
   },
 ];
@@ -281,10 +281,10 @@ export const findingCircularChartData = {
 };
 
 export const funnelChartData = {
-  "total_findings": 21602,
-  "vulnerabilities_aggregated": 11766,
-  "vulnerabilities_prioritized": 5981
-}
+  total_findings: 21602,
+  vulnerabilities_aggregated: 11766,
+  vulnerabilities_prioritized: 5981,
+};
 
 export const findingChartData = [
   {
@@ -295,12 +295,22 @@ export const findingChartData = [
   {
     labels: "Vulnerabilities Aggregated",
     value: `${(funnelChartData.vulnerabilities_aggregated / 1000).toFixed(0)}k`, // Convert to 'k' format
-    percentage: `${((funnelChartData.vulnerabilities_aggregated / funnelChartData.total_findings) * 100).toFixed(0)}%`, // Calculate percentage
+    percentage: `${(
+      (funnelChartData.vulnerabilities_aggregated /
+        funnelChartData.total_findings) *
+      100
+    ).toFixed(0)}%`, // Calculate percentage
   },
   {
     labels: "Vulnerabilities Prioritized",
-    value: `${(funnelChartData.vulnerabilities_prioritized / 1000).toFixed(1)}k`, // Convert to 'k' format with one decimal place
-    percentage: `${((funnelChartData.vulnerabilities_prioritized / funnelChartData.total_findings) * 100).toFixed(0)}%`, // Calculate percentage
+    value: `${(funnelChartData.vulnerabilities_prioritized / 1000).toFixed(
+      1
+    )}k`, // Convert to 'k' format with one decimal place
+    percentage: `${(
+      (funnelChartData.vulnerabilities_prioritized /
+        funnelChartData.total_findings) *
+      100
+    ).toFixed(0)}%`, // Calculate percentage
   },
 ];
 

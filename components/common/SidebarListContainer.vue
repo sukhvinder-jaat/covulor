@@ -8,7 +8,7 @@
       <div
         v-for="(item, index) in dropdownSidebarList"
         :key="index"
-        @click="sidebarHandler"
+        @click="index !== 0 ? sidebarHandler() : null"
       >
         <!-- Dropdown item button -->
         <NuxtLink
