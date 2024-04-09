@@ -8,7 +8,16 @@
       <div class="inline-block pt-2">
         <!-- <USelectMenu v-model="selected" :options="year" placeholder="Last Year"
           class="border border-1 border-iron pb-[6px] pt-1 px-2 sm:py-[6px] sm:px-3 rounded" /> -->
-        <CommonDateRangePicker />
+        <UPopover :popper="{ placement: 'bottom-start' }">
+          <UButton icon="i-heroicons-calendar-days-20-solid">
+            {{ format(selected.start, 'd MMM, yyy') }} - {{ format(selected.end, 'd MMM, yyy') }}
+          </UButton>
+          <template #panel="{ close }">
+            <div class="flex items-center sm:divide-x divide-gray-200 dark:divide-gray-800">
+              <CommonDatePicker v-model="selected" @close="close" />
+            </div>
+          </template>
+        </UPopover>
       </div>
     </div>
     <!-- Chart section -->
@@ -31,17 +40,16 @@
 
 import { toast } from "vue3-toastify";
 import 'vue3-toastify/dist/index.css';
+import { sub, format } from 'date-fns'
 
-const year = ["2023", "2022", "2021", "2020"];
-const selected = ref(year[0]);
+const selected = ref({ start: sub(new Date(), { days: 14 }), end: new Date() })
 
 const getTotalFindingsChatData = async () => {
-  await fetchRequestHandler(get, `${TOTAL_FINDINGS}?start_date=06-06-2023&end_date=06-06-2024`);
-}
+  const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
+  const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
 
-onMounted(async () => {
   try {
-    await getTotalFindingsChatData();
+    await fetchRequestHandler(get, `${TOTAL_FINDINGS}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
   } catch (e: any) {
     // Display an error toast if an exception occurs
     toast.error(e.message, {
@@ -49,5 +57,10 @@ onMounted(async () => {
       position: toast.POSITION.BOTTOM_RIGHT,
     });
   }
-})
+}
+
+onMounted(getTotalFindingsChatData);
+watch(selected, () => {
+  getTotalFindingsChatData();
+});
 </script>

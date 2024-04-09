@@ -2,74 +2,43 @@
   <!-- Container for the dropdown menu -->
   <div class="w-full h-full">
     <div
-      class="mx-auto w-full max-w-md rounded-2xl bg-white h-[71vh] lg:h-[61vh] overflow-y-auto pb-5 scroll_bar_hidden pt-2 pe-0"
-    >
+      class="mx-auto w-full max-w-md rounded-2xl bg-white h-[71vh] lg:h-[61vh] overflow-y-auto pb-5 scroll_bar_hidden pt-2 pe-0">
       <!-- Loop through dropdown items -->
-      <div
-        v-for="(item, index) in dropdownSidebarList"
-        :key="index"
-        @click="index !== 0 ? sidebarHandler() : null"
-      >
+      <div v-for="(item, index) in dropdownSidebarList" :key="index" @click="index !== 0 ? sidebarHandler() : null">
         <!-- Dropdown item button -->
-        <NuxtLink
-          @click="toggleDropdownHandler(index)"
-          :class="
-            indexValue === index ||
+        <NuxtLink @click="toggleDropdownHandler(index)" :class="indexValue === index ||
             route.fullPath.includes(item.title.toLowerCase())
-              ? 'bg-[rgba(96,_91,_255,_0.15)] text-purple'
-              : 'text-dimGray'
-          "
-          :to="item.href"
-          class="flex w-full justify-between items-center rounded-lg px-2 py-2 text-left mb-6"
-        >
+            ? 'bg-[rgba(96,_91,_255,_0.15)] text-purple'
+            : 'text-dimGray'
+          " :to="item.href" class="flex w-full justify-between items-center rounded-lg px-2 py-2 text-left mb-6">
           <!-- Dropdown item title -->
-          <span
-            class="font-medium text-base font-roboto flex gap-2 items-center"
-          >
+          <span class="font-medium text-base font-roboto flex gap-2 items-center">
             <!-- SVG icon -->
-            <component
-              :is="item.svg"
-              class="w-6 h-6"
-              :class="
-                indexValue === index ||
+            <component :is="item.svg" class="w-6 h-6" :class="indexValue === index ||
                 route.fullPath.includes(item.title.toLowerCase())
-                  ? 'active-svg'
-                  : ''
-              "
-            />
+                ? 'active-svg'
+                : ''
+              " />
             {{ item.title }}
           </span>
           <!-- Chevron icon for dropdown toggle -->
           <span :class="item.content === undefined && 'hidden'">
-            <UButton
-              :padded="false"
-              color="#6D6C6B"
-              variant="link"
-              icon="i-heroicons-chevron-up-20-solid"
-              class="size-6 text-dimGray"
-              :class="indexValue === index ? '' : 'rotate-180 transform'"
-            />
+            <UButton :padded="false" color="#6D6C6B" variant="link" icon="i-heroicons-chevron-up-20-solid"
+              class="size-6 text-dimGray" :class="indexValue === index ? '' : 'rotate-180 transform'" />
           </span>
         </NuxtLink>
         <!-- Dropdown item content -->
-        <div
-          :class="{ 'max-h-[270px] opacity-100': indexValue === index }"
-          class="grid text-base md:text-lg overflow-hidden max-h-0 transition-all opacity-0 duration-300 ease-in mt-2 font-sf-pro text-black-natural"
-        >
+        <div :class="{ 'max-h-[270px] opacity-100': indexValue === index }"
+          class="grid text-base md:text-lg overflow-hidden max-h-0 transition-all opacity-0 duration-300 ease-in mt-2 font-sf-pro text-black-natural">
           <template v-for="content in item.content">
             <!-- Content of the dropdown item -->
-            <a
-              :href="content.link"
-              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:inline-block hidden"
-            >
+            <a :href="content.link"
+              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:inline-block hidden">
               {{ content.subLink
               }}<!-- Accessing the link from the array -->
             </a>
-            <a
-              @click="sidebarHandler"
-              :href="content.link"
-              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:hidden inline-block"
-            >
+            <a @click="sidebarHandler" :href="content.link"
+              class="font-normal font-roboto text-base text-dimGray hover:text-purple duration-300 cursor-pointer py-2 pl-4 mb-4 lg:hidden inline-block">
               {{ content.subLink
               }}<!-- Accessing the link from the array -->
             </a>

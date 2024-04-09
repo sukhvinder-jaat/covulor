@@ -7,7 +7,16 @@
             <CommonChartHeading iconUrl="/assets/Icons/Item.svg" heading="Findings Report" />
             <!-- Select menu -->
             <div class="inline-block">
-                <CommonDateRangePicker />
+                <UPopover :popper="{ placement: 'bottom-start' }">
+                    <UButton icon="i-heroicons-calendar-days-20-solid">
+                        {{ format(selected.start, 'd MMM, yyy') }} - {{ format(selected.end, 'd MMM, yyy') }}
+                    </UButton>
+                    <template #panel="{ close }">
+                        <div class="flex items-center sm:divide-x divide-gray-200 dark:divide-gray-800">
+                            <CommonDatePicker v-model="selected" @close="close" />
+                        </div>
+                    </template>
+                </UPopover>
             </div>
         </div>
         <!-- Line graph -->
@@ -20,13 +29,16 @@
 <script setup lang="ts">
 import { toast } from "vue3-toastify";
 import 'vue3-toastify/dist/index.css';
+import { sub, format } from 'date-fns'
+
+const selected = ref({ start: sub(new Date(), { days: 14 }), end: new Date() })
 
 const getFindingsChatData = async () => {
-    await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=06-06-2023&end_date=06-06-2024`);
-}
-onMounted(async () => {
+    const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
+    const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
+
     try {
-        await getFindingsChatData();
+        await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
     } catch (e: any) {
         // Display an error toast if an exception occurs
         toast.error(e.message, {
@@ -34,8 +46,13 @@ onMounted(async () => {
             position: toast.POSITION.BOTTOM_RIGHT,
         });
     }
-})
+}
 
+onMounted(getFindingsChatData);
+
+watch(selected, () => {
+    getFindingsChatData();
+});
 </script>
 
 
