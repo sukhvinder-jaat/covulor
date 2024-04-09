@@ -5,8 +5,8 @@
                 <img src="/public/assets/Icons/repositories.svg" alt="repositories">
                 <p class=" font-roboto font-bold text-xl sm:text-3xl sm:leading-[48px]">Repositories</p>
             </div>
-            <div class=" flex  gap-2 w-full justify-end sm:pr-4">
-                <p class=" font-roboto text-base sm:text-xl sm:leading-[30px] font-normal text-darkSlateGray mt-[-3px]">
+            <div class="flex gap-2 w-full justify-end sm:pr-4 items-center">
+                <p class="font-roboto sm:text-base md:text-xl text-sm sm:leading-[30px] font-normal text-darkSlateGray mt-[-3px]">
                     Manage
                     Repositories</p>
                 <div class="relative">
