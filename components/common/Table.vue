@@ -39,5 +39,17 @@ defineProps({
   header: Array,
 });
 const page = ref(1);
+console.log(page, "page");
 const items = ref(Array(55));
 </script>
+
+<style>
+.repo_pagination button {
+  box-shadow: none !important;
+  border: none;
+  /* color: #6e6893; */
+}
+.repo_pagination button.bg-white {
+  background-color: transparent;
+}
+</style>
