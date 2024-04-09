@@ -280,23 +280,30 @@ export const findingCircularChartData = {
   colors: ["#8220FF", "#05CB0C", "#FD9B3D", "#E6D2FF"],
 };
 
+export const funnelChartData = {
+  "total_findings": 21602,
+  "vulnerabilities_aggregated": 11766,
+  "vulnerabilities_prioritized": 5981
+}
+
 export const findingChartData = [
   {
     labels: "Total Findings",
-    value: "17k",
+    value: `${(funnelChartData.total_findings / 1000).toFixed(0)}k`, // Convert to 'k' format
     percentage: "100%",
   },
   {
     labels: "Vulnerabilities Aggregated",
-    value: "13k",
-    percentage: "35%",
+    value: `${(funnelChartData.vulnerabilities_aggregated / 1000).toFixed(0)}k`, // Convert to 'k' format
+    percentage: `${((funnelChartData.vulnerabilities_aggregated / funnelChartData.total_findings) * 100).toFixed(0)}%`, // Calculate percentage
   },
   {
-    labels: "Vulnerabilities Priorizated",
-    value: "4.0k",
-    percentage: "14%",
+    labels: "Vulnerabilities Prioritized",
+    value: `${(funnelChartData.vulnerabilities_prioritized / 1000).toFixed(1)}k`, // Convert to 'k' format with one decimal place
+    percentage: `${((funnelChartData.vulnerabilities_prioritized / funnelChartData.total_findings) * 100).toFixed(0)}%`, // Calculate percentage
   },
 ];
+
 export const findingPieChartData = {
   labels: "Total",
   value: "6.4587",

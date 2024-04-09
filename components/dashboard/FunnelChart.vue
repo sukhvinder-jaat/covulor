@@ -25,8 +25,9 @@
       </div>
     </div>
     <!-- Percentage labels -->
-    <p  v-for="(items, index) in findingChartData" :key="index" class="text-darkGray font-plus-jakarta font-medium text-sm leading-[150%] absolute "
-    :class="index === 0 ? 'top-[27%] left-[19%]' : index === 1 ? 'top-[38%] left-[50%]' : 'top-[45%] right-[20%]'">
+    <p v-for="(items, index) in findingChartData" :key="index"
+      class="text-darkGray font-plus-jakarta font-medium text-sm leading-[150%] absolute "
+      :class="index === 0 ? 'top-[27%] left-[19%]' : index === 1 ? 'top-[38%] left-[50%]' : 'top-[43%] right-[20%]'">
       {{ items.percentage }}
     </p>
   </div>
@@ -36,7 +37,7 @@
 import "vue3-funnel-graph-js/dist/style.css";
 import { VueFunnelGraph } from "vue3-funnel-graph-js";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { findingChartData } from "~/utils/helper";
+import { findingChartData, funnelChartData } from "~/utils/helper";
 
 // Data for funnel graph
 const labels = [
@@ -44,7 +45,12 @@ const labels = [
   "Vulnerabilities Aggregated",
   "Vulnerabilities Prioritised",
 ];
+
 const values = [[6000], [3000], [700]];
+values[0][0] = funnelChartData.total_findings;
+values[1][0] = funnelChartData.vulnerabilities_aggregated;
+values[2][0] = funnelChartData.vulnerabilities_prioritized;
+
 const colors = [
   ["#FF9A3B", "#13C90F", "#8221FF"],
   ["#A0BBFF", "#13C90F"],
@@ -86,6 +92,3 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', updateWindowWidth);
 });
 </script>
-
-
- 
