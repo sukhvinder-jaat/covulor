@@ -270,7 +270,7 @@ export const dashboardLineChartList = {
 
 //FINDINGS CIRCULAR CHART DATA
 export const findingCircularChartData = {
-  series: [120, 110, 100, 90],
+  series: [50, 110, 100],
   labels: [
     "Vulnerabilities Priorizated",
     "Vulnerabilities Aggregated",
