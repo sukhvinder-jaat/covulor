@@ -2,10 +2,10 @@
   <div>
     <div class="flex gap-2 w-full justify-end sm:pr-4">
       <p class="font-roboto text-base sm:text-xl sm:leading-[30px] font-normal text-darkSlateGray">
-        Manage Repositories
+        Upload Scan
       </p>
       <div @click="openModal"
-        class="flex items-center gap-x-2 max-h-[25px] h-full max-w-[119px] rounded-[10px] w-full cursor-pointer">
+        class="flex items-center gap-x-2 max-h-[25px] h-full max-w-[50px] rounded-[10px] w-full cursor-pointer">
         <IconsPopupPlus />
       </div>
     </div>
