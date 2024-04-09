@@ -1,7 +1,7 @@
 <template>
   <!-- TODO Style pagination right. The design is not right. -->
   <div class="py-4" v-if="pagesArray.length > 1">
-    <div class="text-end flex justify-center sm:flex-row flex-col">
+    <div class="text-end flex justify-center">
       <!-- Page numbers -->
       <div class="overflow-auto">
         <div
@@ -31,7 +31,7 @@
             ? 'cursor-not-allowed bg-transparent'
             : 'hover:opacity-70 bg-darkBlue text-purple'
         "
-        class="p-[11px_10.5px_11px_8.5px] rounded-md text-sm text-rumPurple font-medium font-inter ease-in-out hover:text-purple duration-300 btn-box-shadow items-center flex"
+        class="p-[11px_10.5px_11px_8.5px] rounded-md text-sm text-rumPurple font-medium font-inter ease-in-out hover:text-purple duration-300 btn-box-shadow items-center flex ms-3"
       >
         <span><</span>
       </button>
