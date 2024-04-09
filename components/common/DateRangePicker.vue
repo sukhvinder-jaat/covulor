@@ -18,7 +18,6 @@ function isRangeSelected(duration: Duration) {
 function selectRange(duration: Duration) {
     selected.value = { start: sub(new Date(), duration), end: new Date() }
 }
-console.log(selected.value.start, selected.value.end,"Range")
 </script>
 
 <template>
@@ -35,7 +34,8 @@ console.log(selected.value.start, selected.value.end,"Range")
                         :class="[isRangeSelected(range.duration) ? 'bg-gray-100 dark:bg-gray-800' : 'hover:bg-gray-50 dark:hover:bg-gray-800/50']"
                         truncate @click="selectRange(range.duration)" />
                 </div>
-                <CommonDatePicker v-model="selected" @close="close" />
+
+                <DatePicker v-model="selected" @close="close" />
             </div>
         </template>
     </UPopover>
