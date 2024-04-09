@@ -14,8 +14,8 @@
                 class="py-4 px-5 uppercase tracking-[5%] bg-hawkasBlue text-center font-roboto font-semibold text-xs text-midnightBlue text-nowrap"
               >
                 <div class="flex justify-center items-center">
-                  <span :class="index === 0 ? 'block me-1' : 'hidden'"
-                    ><IconsTableUpDown />
+                  <span :class="index === 0 ? 'block me-1' : 'hidden'">
+                    <IconsTableUpDown />
                   </span>
                   {{ heading }}
                 </div>
@@ -29,7 +29,12 @@
       </div>
     </div>
     <div class="flex justify-end mb-5 repo_pagination">
-      <UPagination v-model="page" :page-count="5" :total="items.length" />
+      <CommonPagination
+        :page="page"
+        :pageSize="pageSize"
+        :pageNumberHandler="pageNumberHandler"
+        :totalDocuments="255"
+      />
     </div>
   </div>
 </template>
@@ -39,5 +44,10 @@ defineProps({
   header: Array,
 });
 const page = ref(1);
-const items = ref(Array(55));
+const pageSize = ref(55);
+const pageNumberHandler = (pages: number) => {
+  page.value = pages;
+  navigateTo(`?page=${pages}`);
+  console.log(page.value, "page");
+};
 </script>
