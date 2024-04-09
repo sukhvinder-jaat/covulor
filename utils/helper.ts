@@ -316,7 +316,10 @@ export const findingChartData = [
 
 export const findingPieChartData = {
   labels: "Total",
-  value: "6.4587",
+  value:
+    funnelChartData.vulnerabilities_prioritized +
+    funnelChartData.total_findings +
+    funnelChartData.vulnerabilities_aggregated,
 };
 
 // FINDINGS REPORT LINE CHART  DATA
