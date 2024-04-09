@@ -6,9 +6,6 @@
         :key="i"
         class="hover:bg-white bg-[#F5F7FB] transition-all ease-in-out duration-150"
       >
-        <!-- <td class="px-5 py-4 whitespace-nowrap pointer-events-none">
-          <p></p>
-        </td> -->
         <td class="px-5 py-4 whitespace-nowrap">
           <p class="font-roboto font-medium text-lg text-lightToBlack">
             {{ content.repository_id }}
@@ -100,12 +97,13 @@
           </p>
         </td>
         <td class="px-5 py-4 whitespace-nowrap">
-          <NuxtLink
+          <a
+            target="_blank"
             class="text-lightToBlack font-roboto font-medium text-xs py-[2px] px-2 bg-hawkasBlue group transition-all ease-in-out duration-300 hover:bg-[#8220FF] rounded-xl flex items-center gap-x-1 justify-center hover:text-white"
-            :to="content.link"
+            :href="content.link"
             >View
             <IconsViewArrow />
-          </NuxtLink>
+          </a>
         </td>
       </tr>
     </CommonTable>
@@ -113,7 +111,6 @@
 </template>
 <script setup lang="ts">
 const heading = [
-  // "",
   "REPOSITORY ID",
   "SOURCE CONTROL",
   "REPO",
