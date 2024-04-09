@@ -34,9 +34,16 @@ const toggleSidebarVisibility = () => {
 // Watch for changes in sidebar visibility to control body overflow
 watch(isSidebarVisible, (newValue) => {
   if (newValue) {
-    document.body.classList.add("overflow-y-hidden");
+    document.body.classList.add("lg_overflow_hidden");
   } else {
-    document.body.classList.remove("overflow-y-hidden");
+    document.body.classList.remove("lg_overflow_hidden");
   }
 });
 </script>
+<style>
+@media (max-width: 1024px) {
+  .lg_overflow_hidden {
+    overflow-y: hidden;
+  }
+}
+</style>
