@@ -68,6 +68,7 @@ module.exports = {
         hawkasBlue: "#DCDCFC",
         turquoiseBlue: "#4CD7F6",
         grayLight: "#F4F4F4",
+        rumPurple: "#6E6893",
       },
       backgroundImage: {
         "login-bg": "url('/public/assets/images/login-bg.webp')",

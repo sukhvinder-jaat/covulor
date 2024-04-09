@@ -2,57 +2,63 @@
   <!-- TODO Style pagination right. The design is not right. -->
   <div class="py-4" v-if="pagesArray.length > 1">
     <div class="text-end flex justify-center sm:flex-row flex-col">
-      <button :disabled="page === 1 ? true : false" @click="pageNumberHandler(page - 1)" :class="page === 1
-        ? 'cursor-not-allowed bg-transparent'
-        : 'hover:opacity-70 bg-darkBlue text-purple'
-        "
-        class="p-[11px_10.5px_11px_8.5px] rounded-md text-sm text-gray700 font-medium font-inter ease-in-out duration-300 border border-gray300 btn-box-shadow hidden items-center sm:flex">
-        <!-- <component :is="ChevronLeftIcon" class="w-4 h-4 text-gray500 mr-2"
-          :class="page === 1 ? 'text-gray500 ' : ' text-purple'" /> -->
-        <span><</span>
-      </button>
       <!-- Page numbers -->
       <div class="overflow-auto">
-        <div class="flex items-center gap-[6px] sm:mx-[18px] justify-center max-w-[320px] sm:max-w-full mx-auto">
-          <button :disabled="pageNumber === '...' ? true : false" v-for="pageNumber in pagesArray" :key="pageNumber"
+        <div
+          class="flex items-center gap-[6px] sm:mx-[18px] justify-center max-w-[320px] sm:max-w-full mx-auto"
+        >
+          <button
+            :disabled="pageNumber === '...' ? true : false"
+            v-for="pageNumber in pagesArray"
+            :key="pageNumber"
             :class="{
-              ' text-red-600 ': pageNumber === page,
+              ' text-purple ': pageNumber === page,
               '': true,
-            }" class="text-2 xl py-[11px] px-5 border border-gray300 rounded-md font-medium"
-            @click="pageNumber !== '...' ? pageNumberHandler(pageNumber) : null">
+            }"
+            class="text-xs py-[11px] px-2 rounded-md font-medium"
+            @click="pageNumber !== '...' ? pageNumberHandler(pageNumber) : null"
+          >
             {{ pageNumber }}
           </button>
         </div>
       </div>
+      <!-- previus -->
+      <button
+        :disabled="page === 1 ? true : false"
+        @click="pageNumberHandler(page - 1)"
+        :class="
+          page === 1
+            ? 'cursor-not-allowed bg-transparent'
+            : 'hover:opacity-70 bg-darkBlue text-purple'
+        "
+        class="p-[11px_10.5px_11px_8.5px] rounded-md text-sm text-rumPurple font-medium font-inter ease-in-out hover:text-purple duration-300 btn-box-shadow items-center flex"
+      >
+        <span><</span>
+      </button>
       <!-- Next Button -->
-      <div class="flex justify-between sm:mt-0 mt-2">
-        <button :disabled="page === 1 ? true : false" @click="pageNumberHandler(page - 1)" :class="page === 1
-          ? 'opacity-75 cursor-not-allowed bg-transparent'
-          : 'hover:opacity-70 bg-darkBlue text-purple'
-          "
-          class="p-[11px_10.5px_11px_8.5px] rounded-md text-gray700 text-sm font-medium font-inter ease-in-out duration-300 border border-gray300 btn-box-shadow items-center sm:hidden flex">
-          <!-- <component :is="ChevronLeftIcon" class="w-4 h-4 text-gray500 mr-2"
-            :class="page === 1 ? 'text-gray500' : ' text-purple'" /> -->
-          <span><</span>
-        </button>
-        <button :class="page === pageCount
-          ? 'opacity-75 cursor-not-allowed bg-transparent'
-          : 'hover:opacity-70 bg-darkBlue text-purple'
-          "
-          class="p-[11px_8.5px_11px_10.5px] rounded-md text-gray700 text-sm font-medium font-inter ease-in-out duration-300 border border-gray300 btn-box-shadow flex items-center"
-          :disabled="page === pageCount ? true : false" @click="pageNumberHandler(page + 1)">
-          <span>></span>
-          <component :is="ChevronRightIcon" class="w-4 h-4 text-gray500 ml-2" :class="page === pageCount ? 'text-gray500' : 'text-purple'
-            " />
-        </button>
-      </div>
+
+      <button
+        :class="
+          page === pageCount
+            ? 'opacity-75 cursor-not-allowed text-purple'
+            : 'hover:opacity-70 bg-darkBlue '
+        "
+        class="p-[11px_8.5px_11px_10.5px] rounded-md text-sm font-medium font-inter ease-in-out duration-300 hover:text-purple flex items-center ms-5"
+        :disabled="page === pageCount ? true : false"
+        @click="pageNumberHandler(page + 1)"
+      >
+        <span>></span>
+        <component
+          :is="ChevronRightIcon"
+          class="w-4 h-4 text-gray500 ml-2"
+          :class="page === pageCount ? 'text-gray500' : 'text-purple'"
+        />
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
-// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/24/outline";
-
 const props = defineProps({
   page: Number,
   pageSize: Number,
