@@ -16,7 +16,7 @@
             class="w-[14px] h-[15px] rounded-[5px] block"
             :class="getIndicatorClass(value.title)"
           ></span>
-          <span class="opacity-70">{{ value.title }}</span>
+          <span class="opacity-70 max-w-[200px] truncate">{{ value.title }}</span>
         </p>
         <div>
           <p
