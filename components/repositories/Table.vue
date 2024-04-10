@@ -3,9 +3,6 @@
     <CommonTable :header="heading">
       <tr v-for="(content, i) in repository.findings.findings" :key="i"
         class="hover:bg-white bg-[#F5F7FB] transition-all ease-in-out duration-150">
-        <td class="px-5 py-4 whitespace-nowrap pointer-events-none">
-          <p></p>
-        </td>
         <td class="px-5 py-4 whitespace-nowrap">
           <p class="font-roboto font-medium text-lg text-lightToBlack">
             {{ content.repository_id }}
@@ -84,7 +81,6 @@
 </template>
 <script setup lang="ts">
 const heading = [
-  "",
   "REPOSITORY ID",
   "SOURCE CONTROL",
   "REPO",
