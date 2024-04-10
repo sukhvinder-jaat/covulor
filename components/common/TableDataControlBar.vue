@@ -11,7 +11,7 @@
                 class="font-inter font-semibold text-[13px] text-white bg-purple py-2 px-3 sm:px-[17px] sm:py-[10px] rounded-md border border-purple hover:bg-white hover:text-purple transition-all ease-in-out duration-300 leading-[15px]">
                 Download
             </UButton>
-            <UButton    @click="handleRefresh"  :disabled="loading"
+            <UButton @click="handleRefresh" :disabled="loading"
                 class="font-inter font-semibold text-[13px] !text-purple !bg-transparent uppercase !shadow-none hover:!bg-transparent flex items-center gap-2 !p-0 !border-0">
                 REFRESCH
                 <span class="hidden sm:block">
@@ -24,15 +24,16 @@
 <script setup lang="ts">
 const loading = ref(false);
 
-    // Handle refresh button click
+// Handle refresh button click
 const handleRefresh = () => {
-  loading.value = true; // Update reactive variable
-  // Perform refresh actions here
-  
-  // Simulate loading completion after 3 seconds
-  setTimeout(() => {
-    loading.value = false;
-  }, 3000);
+    loading.value = true; // Update reactive variable
+    console.log("loading", loading.value)
+    // Simulate loading completion after 3 seconds
+    setTimeout(() => {
+        loading.value = false;
+        console.log("loading:--", loading.value)
+    }, 3000);
+    console.log("loading:--", loading.value)
 };
 
 </script>

@@ -22,7 +22,7 @@
         <!-- Line graph -->
         <CommonReportLineGraph :LineChartList="dashboardLineChartList" :isLegendVisible="true" />
         <!-- Progress bar -->
-        <CommonChartProgressBar />
+        <CommonChartProgressBar :chartProgressBar="dashboardChartProgressBar" />
     </div>
 </template>
 
