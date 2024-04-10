@@ -38,20 +38,20 @@ import Card from "./Card.vue"; // Importing Card component
 const toast = useToast()
 
 
-// const getSlsaThreatsDataHandler = async () => {
-//   // Function to fetch software chain data
-//   await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${SOURCE}`);
-// };
+const getSlsaThreatsDataHandler = async () => {
+  // Function to fetch software chain data
+  await fetchRequestHandler(get, `${SLSA_THREATS}?threat_type=${SOURCE}`);
+};
 
-// // Lifecycle hook for component mounted
-// onMounted(async () => {
-//   try {
-//     await getSlsaThreatsDataHandler();
-//   } catch (e: any) {
-//     // Display an error toast if an exception occurs
-//     toast.add({
-//       title: e.message,
-//     });
-//   }
-// });
+// Lifecycle hook for component mounted
+onMounted(async () => {
+  try {
+    await getSlsaThreatsDataHandler();
+  } catch (e: any) {
+    // Display an error toast if an exception occurs
+    toast.add({
+      title: e.message,
+    });
+  }
+});
 </script>

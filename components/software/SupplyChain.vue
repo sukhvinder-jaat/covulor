@@ -12,20 +12,20 @@ import github from "../../public/assets/Icons/git_hub.svg";
 const toast = useToast()
 
 
-// const getSoftwareChainDataHandler = async () => {
-//   // Function to fetch software chain data
-//   await fetchRequestHandler(get, `${SOFTWARE_SUPPLY_CHAIN}`);
-// }
+const getSoftwareChainDataHandler = async () => {
+  // Function to fetch software chain data
+  await fetchRequestHandler(get, `${SOFTWARE_SUPPLY_CHAIN}`);
+}
 
-// // Lifecycle hook for component mounted
-// onMounted(async () => {
-//   try {
-//     await getSoftwareChainDataHandler();
-//   } catch (e: any) {
-//     // Display an error toast if an exception occurs
-//     toast.add({
-//       title: e.message,
-//     });
-//   }
-// })
+// Lifecycle hook for component mounted
+onMounted(async () => {
+  try {
+    await getSoftwareChainDataHandler();
+  } catch (e: any) {
+    // Display an error toast if an exception occurs
+    toast.add({
+      title: e.message,
+    });
+  }
+})
 </script>

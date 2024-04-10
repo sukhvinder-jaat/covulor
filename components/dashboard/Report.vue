@@ -32,26 +32,26 @@ import { sub, format } from 'date-fns'
 
 const selected = ref({ start: sub(new Date(), { days: 14 }), end: new Date() })
 
-// const getFindingsChatData = async () => {
-//     const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
-//     const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
+const getFindingsChatData = async () => {
+    const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
+    const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
 
-//     try {
-//         await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
-//     } catch (e: any) {
-//         // Display an error toast if an exception occurs
-//         toast.add({
-//             title: 'hello world',
-//             timeout: 1,
-//         });
-//     }
-// }
+    try {
+        await fetchRequestHandler(get, `${FINDINGS_CHAT}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
+    } catch (e: any) {
+        // Display an error toast if an exception occurs
+        toast.add({
+            title: 'hello world',
+            timeout: 1,
+        });
+    }
+}
 
-// onMounted(getFindingsChatData);
+onMounted(getFindingsChatData);
 
-// watch(selected, () => {
-//     getFindingsChatData();
-// });
+watch(selected, () => {
+    getFindingsChatData();
+});
 </script>
 
 

@@ -2,7 +2,8 @@ export const get = "GET";
 export const post = "POST";
 
 const BackendHostUrl = 'http://mock-api.plexicus.com:8080';
-const token = process.env.ACCESS_TOKEN;
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNDE1LCJ1c2VybmFtZSI6bnVsbCwiZXhwIjoxNzEyMzg5Mzc4fQ.A6BvBsfRul8JJkpsjq9YzHO8VY9UDzePyxGWpsTKed8";
 
 export const fetchRequestHandler = async function (
     method: string,
@@ -27,7 +28,7 @@ export const fetchRequestHandler = async function (
         headers["Accept"] = "application/json";
     }
 
-    let res = await fetch(`${BackendHostUrl}${url}`, options);
+    let res = await fetch(`${proxyUrl}${BackendHostUrl}${url}`, options);
 
     const data = await res.json();
 
