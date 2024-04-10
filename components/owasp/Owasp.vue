@@ -21,22 +21,20 @@ import { topRank } from "../../utils/helper";
 import Heading from "../common/Heading.vue";
 import Cards from "./Cards.vue";
 import owaspLogo from "/assets/images/logo.png";
-import { toast } from "vue3-toastify";
-import 'vue3-toastify/dist/index.css';
+// const toast = useToast()
 
-const getOwaspTopDataHandler = async () => {
-  await fetchRequestHandler(get, `${OWASP_TOP}`);
-}
+// const getOwaspTopDataHandler = async () => {
+//   await fetchRequestHandler(get, `${OWASP_TOP}`);
+// }
 
-onMounted(async () => {
-  try {
-    await getOwaspTopDataHandler();
-  } catch (e: any) {
-    // Display an error toast if an exception occurs
-    toast.error(e.message, {
-      autoClose: 2000,
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
-  }
-})
+// onMounted(async () => {
+//   try {
+//     await getOwaspTopDataHandler();
+//   } catch (e: any) {
+//     // Display an error toast if an exception occurs
+//     toast.add({
+//       title: e.message,
+//     });
+//   }
+// })
 </script>

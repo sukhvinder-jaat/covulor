@@ -2,8 +2,9 @@
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <UNotifications />
 </template>
-<script setup lang="ts">  
+<script setup lang="ts">
 useSeoMeta({
   title: "Covulor",
   ogTitle: "Covulor",

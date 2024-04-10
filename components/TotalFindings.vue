@@ -37,30 +37,28 @@
 </template>
 
 <script setup lang="ts">
+const toast = useToast()
 
-import { toast } from "vue3-toastify";
-import 'vue3-toastify/dist/index.css';
 import { sub, format } from 'date-fns'
 
 const selected = ref({ start: sub(new Date(), { days: 14 }), end: new Date() })
 
-const getTotalFindingsChatData = async () => {
-  const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
-  const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
+// const getTotalFindingsChatData = async () => {
+//   const formattedStartDate = format(selected.value.start, 'dd-MM-yyyy');
+//   const formattedEndDate = format(selected.value.end, 'dd-MM-yyyy');
 
-  try {
-    await fetchRequestHandler(get, `${TOTAL_FINDINGS}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
-  } catch (e: any) {
-    // Display an error toast if an exception occurs
-    toast.error(e.message, {
-      autoClose: 2000,
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
-  }
-}
+//   try {
+//     await fetchRequestHandler(get, `${TOTAL_FINDINGS}?start_date=${formattedStartDate}&end_date=${formattedEndDate}`);
+//   } catch (e: any) {
+//     // Display an error toast if an exception occurs
+//     toast.add({
+//       title: e.message,
+//     });
+//   }
+// }
 
-onMounted(getTotalFindingsChatData);
-watch(selected, () => {
-  getTotalFindingsChatData();
-});
+// onMounted(getTotalFindingsChatData);
+// watch(selected, () => {
+//   getTotalFindingsChatData();
+// });
 </script>

@@ -21,8 +21,7 @@
     "vue-apexcharts": "^1.6.2",
     "vue-router": "^4.3.0",
     "vue3-apexcharts": "^1.5.2",
-    "vue3-funnel-graph-js": "^0.0.3",
-    "vue3-toastify": "^0.2.1"
+    "vue3-funnel-graph-js": "^0.0.3"
   },
   "devDependencies": {
     "@nuxt/ui": "npm:@nuxt/ui-edge@latest",

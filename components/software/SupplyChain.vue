@@ -9,25 +9,23 @@
 
 <script setup lang="ts">
 import github from "../../public/assets/Icons/git_hub.svg";
-import { toast } from "vue3-toastify";
-import 'vue3-toastify/dist/index.css';
+const toast = useToast()
 
 
-const getSoftwareChainDataHandler = async () => {
-  // Function to fetch software chain data
-  await fetchRequestHandler(get, `${SOFTWARE_SUPPLY_CHAIN}`);
-}
+// const getSoftwareChainDataHandler = async () => {
+//   // Function to fetch software chain data
+//   await fetchRequestHandler(get, `${SOFTWARE_SUPPLY_CHAIN}`);
+// }
 
-// Lifecycle hook for component mounted
-onMounted(async () => {
-  try {
-    await getSoftwareChainDataHandler();
-  } catch (e: any) {
-    // Display an error toast if an exception occurs
-    toast.error(e.message, {
-      autoClose: 2000,
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
-  }
-})
+// // Lifecycle hook for component mounted
+// onMounted(async () => {
+//   try {
+//     await getSoftwareChainDataHandler();
+//   } catch (e: any) {
+//     // Display an error toast if an exception occurs
+//     toast.add({
+//       title: e.message,
+//     });
+//   }
+// })
 </script>
