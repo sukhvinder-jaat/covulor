@@ -1,5 +1,6 @@
 <template>
   <div class="mt-[35px]">
+    {{ console.log(RepositoriesList, "RepositoriesListRepositoriesList") }}
     <CommonTable :header="heading">
       <tr v-for="(content, i) in repository.findings.findings" :key="i"
         class="hover:bg-white bg-[#F5F7FB] transition-all ease-in-out duration-150">
@@ -20,16 +21,16 @@
         </td>
         <td class="px-5 py-4 whitespace-nowrap">
           <p class="flex items-center gap-x-[3px] text-sm font-roboto font-medium text-lightGreen" :class="content.priority < 50
-              ? '!text-turquoiseBlue'
-              : content.priority < 80
-                ? '!text-lawnGreen'
-                : content.priority > 80 && 'text-lightGreen'
+            ? '!text-turquoiseBlue'
+            : content.priority < 80
+              ? '!text-lawnGreen'
+              : content.priority > 80 && 'text-lightGreen'
             ">
             <UProgress :value="content.priority" :color="content.priority < 50
-                ? 'turquoiseBlue'
-                : content.priority < 80
-                  ? 'lawnGreen'
-                  : content.priority > 80 && 'lightGreen'
+              ? 'turquoiseBlue'
+              : content.priority < 80
+                ? 'lawnGreen'
+                : content.priority > 80 && 'lightGreen'
               " />
             {{ content.priority }}
           </p>
@@ -89,6 +90,14 @@ const heading = [
   "BRANCH",
   "",
 ];
+
+const props = defineProps({
+  RepositoriesList: {
+    type: Object,
+    required: true,
+  },
+});
+
 // new table data
 const repository = {
   findings: {

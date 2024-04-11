@@ -13,6 +13,7 @@
     "@nuxt/image": "^1.4.0",
     "@nuxt/ui": "^2.15.0",
     "apexcharts": "^3.48.0",
+    "cors-anywhere": "^0.4.4",
     "date-fns": "^3.6.0",
     "nuxi": "^3.11.1",
     "nuxt": "^3.11.1",
